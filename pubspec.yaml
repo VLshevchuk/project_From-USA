@@ -1,0 +1,218 @@
+name: from_usa
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  path: ^1.8.0
+  flutter_svg: ^2.0.9
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/image70.png
+    - assets/welcome.png
+    - assets/viewer2.svg
+    - assets/Lock.svg
+    - assets/add_user.svg
+    - assets/group411.svg
+    - assets/password.svg
+    - assets/vector.svg
+    - assetsPanel/assetsImage/armchair.png
+    - assetsPanel/assetsSvg/frame1.svg
+    - assetsPanel/assetsImage/nike2.png
+    - assetsPanel/assetsSvg/left.svg
+    - assetsPanel/assetsSvg/right.svg
+    - assetsPanel/assetsSvg/indicator2.svg
+    - assetsPanel/assetsImage/deliveryman1.png
+    - assetsPanel/assetsSvg/fromUSA.svg
+    - assetsPanel/assetsImage/usa2.png
+    - assetsPanel/assetsSvg/tick.svg
+    - assetsPanel/assetsSvg/indicator3.svg
+    - assetsPanel/assetsSvg/radio.svg
+    - assetsPanel/assetsSvg/radioWhite.svg
+    - assetsPanel/assetsSvg/copy.svg
+    - assetsPanel/assetsSvg/money.svg
+    - assetsPanel/assetsSvg/location.svg
+    - assetsPanel/assetsSvg/indicator4.svg
+    - assetsPanel/assetsSvg/radioBlue.svg
+    - assetsPanel/assetsSvg/edit2.svg
+    - assetsPanel/assetsImage/tree.png
+    - assetsPanel/assetsSvg/carbondioxide2.svg
+    - assetsPanel/assetsSvg/carbondioxidef.svg
+    # Delivery assets
+    - assetsDelivery/assetsSvg/notification.svg
+    - assetsDelivery/assetsSvg/vectorD.svg
+    - assetsDelivery/assetsImage/car.png
+    - assetsDelivery/assetsSvg/greenCircle.svg
+    - assetsDelivery/assetsImage/air.png
+    - assetsDelivery/assetsSvg/+-.svg
+    - assetsDelivery/assetsImage/amazon.png
+    - assetsDelivery/assetsImage/ebay.png
+    - assetsDelivery/assetsImage/walk.png
+    - assetsDelivery/assetsImage/macys.png
+    - assetsDelivery/assetsImage/jacket.png
+    - assetsDelivery/assetsImage/watch.png
+    - assetsDelivery/assetsSvg/home.svg
+    - assetsDelivery/assetsSvg/profile.svg
+    - assetsDelivery/assetsSvg/group.svg
+    - assetsDelivery/assetsSvg/bag.svg
+    - assetsDelivery/assetsSvg/+.svg
+    - assetsDelivery/assetsSvg/left2.svg
+    - assetsDelivery/assetsSvg/newvector.svg
+    - assetsDelivery/assetsSvg/ww.svg
+    - assetsDelivery/assetsSvg/buy111.svg
+    # Bag assets
+    - assetsBag/assetsSvg/dollars.svg
+    - assetsBag/assetsSvg/notActivehome.svg
+    - assetsBag/assetsSvg/activeBag.svg
+    - assetsBag/assetsSvg/invoice.svg
+    - assetsBag/assetsSvg/infoSquare.svg
+    - assetsBag/assetsImage/bayAndDelivery.png
+    - assetsBag/assetsImage/onlyDelivery.png
+    - assetsBag/assetsImage/america.png
+    - assetsBag/assetsImage/ukraine.png
+    - assetsBag/assetsSvg/blue+.svg
+    - assetsBag/assetsSvg/box.svg
+    - assetsBag/assetsSvg/camera.svg
+    - assetsBag/assetsSvg/video.svg
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+    
+
+
+
+    # - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: fonts/Lato-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+    - family: Opens
+      fonts:
+        - asset: fonts/OpenSans-Regular.ttf
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
