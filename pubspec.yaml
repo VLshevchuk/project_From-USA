@@ -113,6 +113,9 @@ flutter:
     - assetsDelivery/assetsSvg/newvector.svg
     - assetsDelivery/assetsSvg/ww.svg
     - assetsDelivery/assetsSvg/buy111.svg
+    - assetsDelivery/assetsSvg/radioBlue.svg
+
+
     # Bag assets
     - assetsBag/assetsSvg/dollars.svg
     - assetsBag/assetsSvg/notActivehome.svg
@@ -127,6 +130,17 @@ flutter:
     - assetsBag/assetsSvg/box.svg
     - assetsBag/assetsSvg/camera.svg
     - assetsBag/assetsSvg/video.svg
+    - assetsBag/assetsImage/rectangle.png
+    - assetsBag/assetsSvg/zero.svg
+    - assetsBag/assetsSvg/blueCircle3.svg
+    - assetsBag/assetsSvg/questionIcon.svg
+    - assetsBag/assetsSvg/twoStripes.svg
+    - assetsBag/assetsSvg/plusBlue.svg
+
+
+
+
+
 
 
 

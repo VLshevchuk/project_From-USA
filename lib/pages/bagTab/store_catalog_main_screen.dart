@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
 import 'package:from_usa/helpWidgets/text_widget.dart';
 import 'package:from_usa/pages/bagTab/product_selection.dart';
+import 'package:from_usa/pages/deliveryRegistrationPanel/delivery_main_screen.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class StoreCatalog extends StatelessWidget {
@@ -17,46 +20,34 @@ class StoreCatalog extends StatelessWidget {
       color: Color.fromRGBO(19, 59, 119, 1.0),
     );
     return Scaffold(
-      extendBody: true,
+      backgroundColor: Colors.white,
+      // extendBody: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color.fromRGBO(15, 196, 148, 1.0),
         child: SvgPicture.asset("assetsDelivery/assetsSvg/+.svg"),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation:
+          CustomFloatingActionButtonLocation(bottom: 68, left: 177.5),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: const Color.fromARGB(255, 232, 235, 241),
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsBag/assetsSvg/notActivehome.svg"),
+        clipBehavior: Clip.none,
+        elevation: 0,
+        child: BottomAppBarWidget(
+          imageFirst: 'assetsBag/assetsSvg/notActivehome.svg',
+          imageTwo: "assetsBag/assetsSvg/activeBag.svg",
+          imageThree: "assetsBag/assetsSvg/invoice.svg",
+          imageFor: "assetsDelivery/assetsSvg/profile.svg",
+          onPressedFirst: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const DeliveryMainScreen(),
               ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreCatalog(),
-                    ),
-                  );
-                },
-                icon: SvgPicture.asset("assetsBag/assetsSvg/activeBag.svg"),
-              ),
-              globals.sizedBoxWidth40px,
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsBag/assetsSvg/invoice.svg"),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/profile.svg"),
-              ),
-            ],
-          ),
+            );
+          },
+          onPressedTwo: () {},
+          onPressedThree: () {},
+          onPressedFor: () {},
         ),
       ),
       body: Padding(
@@ -97,24 +88,15 @@ class StoreCatalog extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
-                      'Обувь',
-                      style: textStyle,
-                    ),
+                    child: Text('Обувь', style: textStyle),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
-                      'Одежда',
-                      style: textStyle,
-                    ),
+                    child: Text('Одежда', style: textStyle),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
-                      'Электроника',
-                      style: textStyle,
-                    ),
+                    child: Text('Электроника', style: textStyle),
                   ),
                 ],
               ),
@@ -124,36 +106,40 @@ class StoreCatalog extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  price(
+                  product(
                     'assetsDelivery/assetsImage/jacket.png',
                     '50\$',
                     '75\$',
                     'Columbia cxl 123',
-                    'www.columbia.сom',context,
+                    'www.columbia.сom',
+                    context,
                   ),
                   globals.sizedBoxWidth10px,
-                  price(
+                  product(
                     'assetsDelivery/assetsImage/watch.png',
                     '1k\$',
                     '1.2k\$',
                     'CASIVO 12345 L',
-                    'www.casivo.сom',context,
+                    'www.casivo.сom',
+                    context,
                   ),
                   globals.sizedBoxWidth10px,
-                  price(
+                  product(
                     'assetsDelivery/assetsImage/jacket.png',
                     '770\$',
                     '885\$',
                     'Columbia cxl 123',
-                    'www.columbia.сom',context,
+                    'www.columbia.сom',
+                    context,
                   ),
                   globals.sizedBoxWidth10px,
-                  price(
+                  product(
                     'assetsDelivery/assetsImage/watch.png',
                     '2k\$',
                     '3k\$',
                     'CASIVO 12345 L',
-                    'www.casivo.сom',context,
+                    'www.casivo.сom',
+                    context,
                   ),
                 ],
               ),
@@ -197,12 +183,7 @@ class StoreCatalog extends StatelessWidget {
                   fontFamily: 'Lato',
                   fontSize: 16.0,
                   fontWeight: FontWeight.w700,
-                  color: Color.fromRGBO(
-                    0,
-                    102,
-                    255,
-                    1.0,
-                  ),
+                  color: Color.fromRGBO(0, 102, 255, 1.0),
                   letterSpacing: 0.5,
                 ),
                 const Expanded(
@@ -231,40 +212,40 @@ class StoreCatalog extends StatelessWidget {
   }
 }
 
-Widget price(String imgString, String activePrice, String notActivePrice,
-    String nameProduct, String website,BuildContext context) {
+Widget product(String imgString, String activePrice, String notActivePrice,
+    String nameProduct, String website, BuildContext context) {
   return Stack(
     clipBehavior: Clip.none,
     children: [
       Container(
-        height: 230,
-        width: 163,
+        height: 230.0,
+        width: 163.0,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
             width: 2.0,
-            color: const Color.fromRGBO(248, 250, 253, 1),
+            color: const Color.fromRGBO(248, 250, 253, 1.0),
           ),
-          color: const Color.fromARGB(255, 241, 244, 250),
+          color: const Color.fromRGBO(248, 250, 253, 1.0),
         ),
         child: IconButton(
           onPressed: () {
-           Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>  const ProductSelection(),
-                    ),
-                  );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ProductSelection(),
+              ),
+            );
           },
           icon: Image.asset(imgString),
         ),
       ),
       Positioned(
-        right: 5,
-        top: 30,
+        right: 5.0,
+        top: 30.0,
         child: Container(
-          width: 48,
-          height: 48,
+          width: 48.0,
+          height: 48.0,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Color.fromRGBO(0, 102, 255, 0.16),
@@ -273,7 +254,7 @@ Widget price(String imgString, String activePrice, String notActivePrice,
             child: TextWidgets(
               text: notActivePrice,
               fontFamily: "Poppins",
-              fontSize: 14,
+              fontSize: 14.0,
               fontWeight: FontWeight.w600,
               color: Colors.white,
               letterSpacing: 0.75,
@@ -282,10 +263,10 @@ Widget price(String imgString, String activePrice, String notActivePrice,
         ),
       ),
       Positioned(
-        right: 5,
+        right: 5.0,
         child: Container(
-          width: 48,
-          height: 48,
+          width: 48.0,
+          height: 48.0,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Color.fromRGBO(15, 196, 148, 1.0),
@@ -294,9 +275,9 @@ Widget price(String imgString, String activePrice, String notActivePrice,
             child: TextWidgets(
               text: activePrice,
               fontFamily: "Lato",
-              fontSize: 14,
+              fontSize: 14.0,
               fontWeight: FontWeight.w700,
-              color: const Color.fromRGBO(5, 98, 73, 1),
+              color: const Color.fromRGBO(5, 98, 73, 1.0),
               letterSpacing: 1.0,
             ),
           ),
@@ -318,7 +299,9 @@ Widget price(String imgString, String activePrice, String notActivePrice,
         bottom: -5.0,
         child: TextButton(
           onPressed: () {},
-          child: TextLato14pxW400(text: website),
+          child: TextLato14pxW400(
+            text: website,
+          ),
         ),
       ),
     ],
@@ -331,7 +314,7 @@ Widget shoppingMalls(String imageAsset) {
     height: 100.0,
     decoration: BoxDecoration(
       borderRadius: BorderRadiusDirectional.circular(10.0),
-      color: const Color.fromRGBO(234, 240, 248, 1),
+      color: const Color.fromRGBO(248, 250, 253, 1.0),
     ),
     child: IconButton(
       onPressed: () {},

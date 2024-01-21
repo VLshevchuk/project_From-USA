@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:from_usa/pages/bagTab/product_selection.dart';
+import 'package:from_usa/pages/bagTab/store_catalog_main_screen.dart';
 import 'package:from_usa/pages/informationPanel/panelScreenFour/panel_screen_four.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
+
+import 'pages/deliveryRegistrationPanel/function_delivery_only.dart';
+import 'pages/deliveryRegistrationPanel/function_delivery_rates.dart';
+import 'pages/deliveryRegistrationPanel/function_purchase_and_delivery.dart';
+import 'pages/informationPanel/panelScreenLast/panel_screen_last.dart';
 
 void main() {
   runApp(
@@ -17,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     globals.updateScreenSize(context);
     return const Scaffold(
-      body: PanelScreenFour(),
+      body: ProductSelection(),
     );
   }
 }

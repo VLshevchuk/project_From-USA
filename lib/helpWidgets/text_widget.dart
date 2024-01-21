@@ -45,7 +45,7 @@ class TextLato14pxW700 extends StatelessWidget {
           fontFamily: "Lato",
           fontSize: 14.0,
           fontWeight: FontWeight.w700,
-          color: Color.fromRGBO(19, 59, 119, 1),
+          color: Color.fromRGBO(19, 59, 119, 1.0),
           letterSpacing: 1.0),
     );
   }
@@ -66,11 +66,12 @@ class TextLato14pxW400 extends StatelessWidget {
       text,
       textAlign: textAlign,
       style: const TextStyle(
-          fontFamily: "Lato",
-          fontSize: 14.0,
-          fontWeight: FontWeight.w400,
-          color: Color.fromRGBO(19, 59, 119, 1),
-          letterSpacing: 1.0),
+        fontFamily: "Lato",
+        fontSize: 14.0,
+        fontWeight: FontWeight.w400,
+        color: Color.fromRGBO(19, 59, 119, 1.0),
+        letterSpacing: 1.0,
+      ),
     );
   }
 }
@@ -88,11 +89,12 @@ class TextLato40pxW800 extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-          fontFamily: "Lato",
-          fontSize: customSize ?? 40.0,
-          fontWeight: FontWeight.w800,
-          color: const Color.fromRGBO(19, 59, 119, 1),
-          letterSpacing: letterSpacing ?? 0.5),
+        fontFamily: "Lato",
+        fontSize: customSize ?? 40.0,
+        fontWeight: FontWeight.w800,
+        color: const Color.fromRGBO(19, 59, 119, 1.0),
+        letterSpacing: letterSpacing ?? 0.5,
+      ),
     );
   }
 }
@@ -112,7 +114,7 @@ class TextGreenButton extends StatelessWidget {
           fontFamily: "Lato",
           fontSize: 14.0,
           fontWeight: FontWeight.w800,
-          color: Color.fromRGBO(5, 98, 73, 1),
+          color: Color.fromRGBO(5, 98, 73, 1.0),
           letterSpacing: 1.0),
     );
   }

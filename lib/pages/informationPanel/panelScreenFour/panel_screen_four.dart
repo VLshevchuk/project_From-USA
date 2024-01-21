@@ -13,14 +13,13 @@ class PanelScreenFour extends StatefulWidget {
   State<PanelScreenFour> createState() => _PanelScreenFourState();
 }
 
-List<String> options = ['options1', 'options2'];
-
 class _PanelScreenFourState extends State<PanelScreenFour> {
-  String currentOption = options[0];
   bool change = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SizedBox(
           width: globals.width * 0.9115,
@@ -33,26 +32,24 @@ class _PanelScreenFourState extends State<PanelScreenFour> {
                   change
                       ? SvgPicture.asset("assetsPanel/assetsSvg/radio.svg")
                       : SvgPicture.asset(
-                          "assetsPanel/assetsSvg/radio.svg",
+                          "assetsPanel/assetsSvg/radioWhite.svg",
                           colorFilter: const ColorFilter.mode(
-                            Color.fromARGB(255, 212, 212, 204),
-                            BlendMode.color,
+                            Color.fromRGBO(248, 250, 253, 1),
+                            BlendMode.srcATop,
                           ),
                         ),
-                  Radio(
-                    value: options[0],
-                    groupValue: currentOption,
-                    onChanged: (value) {
+                  globals.sizedBoxWidth10px,
+                  TextButton(
+                    onPressed: () {
+                      change = !change;
                       setState(() {
-                        change = !change;
-                        currentOption = value.toString();
+                        change;
                       });
                     },
-                  ),
-                  globals.sizedBoxWidth10px,
-                  const TextLato40pxW800(
-                    text: 'Покупка и доставка',
-                    customSize: 20.0,
+                    child: const TextLato40pxW800(
+                      text: 'Покупка и доставка',
+                      customSize: 20.0,
+                    ),
                   ),
                 ],
               ),
@@ -64,31 +61,30 @@ class _PanelScreenFourState extends State<PanelScreenFour> {
                       ? SvgPicture.asset(
                           "assetsPanel/assetsSvg/radioWhite.svg",
                           colorFilter: const ColorFilter.mode(
-                              Color.fromRGBO(247, 243, 244, 1),
-                              BlendMode.srcATop),
+                            Color.fromRGBO(248, 250, 253, 1),
+                            BlendMode.srcATop,
+                          ),
                         )
-                      : SvgPicture.asset("assetsPanel/assetsSvg/radio.svg"),
-                  Radio(
-                    value: options[1],
-                    groupValue: currentOption,
-                    onChanged: (value) {
-                      setState(
-                        () {
-                          change = false;
-                          currentOption = value.toString();
-                        },
-                      );
+                      : SvgPicture.asset(
+                          "assetsDelivery/assetsSvg/radioBlue.svg",
+                        ),
+                  TextButton(
+                    onPressed: () {
+                      change = false;
+                      setState(() {
+                        change;
+                      });
                     },
-                  ),
-                  TextWidgets(
-                    text: "Только доставка",
-                    fontFamily: 'Lato',
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w800,
-                    color: change
-                        ? const Color.fromRGBO(238, 241, 245, 1.0)
-                        : const Color.fromRGBO(19, 59, 119, 1.0),
-                    letterSpacing: 0.5,
+                    child: TextWidgets(
+                      text: "Только доставка",
+                      fontFamily: 'Lato',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w800,
+                      color: change
+                          ? const Color.fromRGBO(238, 241, 245, 1.0)
+                          : const Color.fromRGBO(19, 59, 119, 1.0),
+                      letterSpacing: 0.5,
+                    ),
                   ),
                 ],
               ),
@@ -149,7 +145,8 @@ class _PanelScreenFourState extends State<PanelScreenFour> {
                                 )),
                             Expanded(
                               child: SvgPicture.asset(
-                                  "assetsPanel/assetsSvg/indicator4.svg"),
+                                "assetsPanel/assetsSvg/indicator4.svg",
+                              ),
                             ),
                             TextButton(
                               onPressed: () {
@@ -223,8 +220,10 @@ class _PanelScreenFourState extends State<PanelScreenFour> {
                                   text: 'Назад',
                                 )),
                             Expanded(
-                                child: SvgPicture.asset(
-                                    "assetsPanel/assetsSvg/indicator4.svg")),
+                              child: SvgPicture.asset(
+                                "assetsPanel/assetsSvg/indicator4.svg",
+                              ),
+                            ),
                             TextButton(
                               onPressed: () {
                                 Navigator.push(

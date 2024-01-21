@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
 import 'package:from_usa/helpWidgets/green_button.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:from_usa/helpWidgets/text_widget.dart';
@@ -13,46 +15,34 @@ class FunctionDeliveryOnly extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBody: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color.fromRGBO(15, 196, 148, 1.0),
         child: SvgPicture.asset("assetsDelivery/assetsSvg/+.svg"),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation:
+          CustomFloatingActionButtonLocation(bottom: 68, left: 177.5),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: const Color.fromARGB(255, 232, 235, 241),
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/home.svg"),
+        clipBehavior: Clip.none,
+        elevation: 0,
+        child: BottomAppBarWidget(
+          imageFirst: 'assetsDelivery/assetsSvg/home.svg',
+          imageTwo: "assetsDelivery/assetsSvg/bag.svg",
+          imageThree: "assetsBag/assetsSvg/invoice.svg",
+          imageFor: "assetsDelivery/assetsSvg/profile.svg",
+          onPressedFirst: () {},
+          onPressedTwo: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const StoreCatalog(),
               ),
-              IconButton(
-                onPressed: () {
-                     Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreCatalog(),
-                    ),
-                  );
-                },
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/bag.svg"),
-              ),
-              globals.sizedBoxWidth40px,
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/group.svg"),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/profile.svg"),
-              ),
-            ],
-          ),
+            );
+          },
+          onPressedThree: () {},
+          onPressedFor: () {},
         ),
       ),
       body: Padding(
@@ -68,7 +58,7 @@ class FunctionDeliveryOnly extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>const DeliveryMainScreen(),
+                        builder: (context) => const DeliveryMainScreen(),
                       ),
                     );
                   },
@@ -89,7 +79,7 @@ class FunctionDeliveryOnly extends StatelessWidget {
               height: 74.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(10.0),
-                color: const Color.fromRGBO(241, 253, 248, 1.0),
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: const Column(
                 children: [

@@ -12,6 +12,7 @@ class PanelScreenLast extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SizedBox(
           width: globals.width * 0.9115,
@@ -58,7 +59,7 @@ class PanelScreenLast extends StatelessWidget {
               Container(
                 height: 120,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 236, 238, 240),
+                  color: const Color.fromRGBO(248, 250, 253, 1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(

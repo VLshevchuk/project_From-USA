@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
 import 'package:from_usa/helpWidgets/row_widget.dart';
 import 'package:from_usa/helpWidgets/text_widget.dart';
 import 'package:from_usa/pages/bagTab/store_catalog_main_screen.dart';
@@ -14,6 +16,7 @@ class DeliveryMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBody: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -21,63 +24,30 @@ class DeliveryMainScreen extends StatelessWidget {
         child: SvgPicture.asset("assetsDelivery/assetsSvg/+.svg"),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: const Color.fromARGB(255, 232, 235, 241),
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/home.svg"),
+        clipBehavior: Clip.none,
+        elevation: 0,
+        child: BottomAppBarWidget(
+          imageFirst: 'assetsDelivery/assetsSvg/home.svg',
+          imageTwo: "assetsDelivery/assetsSvg/bag.svg",
+          imageThree: "assetsDelivery/assetsSvg/group.svg",
+          imageFor: "assetsDelivery/assetsSvg/profile.svg",
+          onPressedFirst: () {},
+          onPressedTwo: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const StoreCatalog(),
               ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreCatalog(),
-                    ),
-                  );
-                },
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/bag.svg"),
-              ),
-              globals.sizedBoxWidth40px,
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/group.svg"),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/profile.svg"),
-              ),
-            ],
-          ),
+            );
+          },
+          onPressedThree: () {},
+          onPressedFor: () {},
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   backgroundColor: Colors.red,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: SvgPicture.asset("assetsDelivery/assetsSvg/home.svg"),
-      //       label: '',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: SvgPicture.asset("assetsDelivery/assetsSvg/bag.svg"),
-      //       label: '',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: SvgPicture.asset("assetsDelivery/assetsSvg/group.svg"),
-      //       label: '',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: SvgPicture.asset("assetsDelivery/assetsSvg/profile.svg"),
-      //       label: '',
-      //     ),
-      //   ],
-      // ),
-
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: CustomFloatingActionButtonLocation(
+        bottom: 68,
+        left: 177.5,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(left: 25.0, right: 25.0),
         child: Column(
@@ -86,7 +56,9 @@ class DeliveryMainScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SvgPicture.asset("assetsDelivery/assetsSvg/notification.svg"),
+                SvgPicture.asset(
+                  "assetsDelivery/assetsSvg/notification.svg",
+                ),
                 const TextWidgets(
                   text: 'FromUSA',
                   fontFamily: "Lato",
@@ -96,7 +68,9 @@ class DeliveryMainScreen extends StatelessWidget {
                   letterSpacing: 0.5,
                 ),
                 // const Spacer(),
-                SvgPicture.asset("assetsDelivery/assetsSvg/vectorD.svg"),
+                SvgPicture.asset(
+                  "assetsDelivery/assetsSvg/vectorD.svg",
+                ),
               ],
             ),
             globals.sizedBoxHeight20px,
@@ -140,7 +114,7 @@ class DeliveryMainScreen extends StatelessWidget {
               height: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color.fromRGBO(235, 238, 237, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
               child: Row(
                 children: [
@@ -185,7 +159,7 @@ class DeliveryMainScreen extends StatelessWidget {
               height: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color.fromRGBO(235, 238, 237, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
               child: Row(
                 children: [
@@ -339,11 +313,11 @@ Widget product(
             width: 2.0,
             color: const Color.fromRGBO(248, 250, 253, 1),
           ),
-          color: const Color.fromARGB(255, 241, 244, 250),
+          color: const Color.fromRGBO(248, 250, 253, 1),
         ),
         child: Image.asset(imgString),
       ),
-       Positioned(
+      Positioned(
         right: 5,
         top: 24,
         child: Container(
@@ -387,7 +361,6 @@ Widget product(
           ),
         ),
       ),
-     
       Positioned(
         left: 20.0,
         bottom: 30.0,

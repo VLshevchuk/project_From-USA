@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
 import 'package:from_usa/helpWidgets/text_widget.dart';
 import 'package:from_usa/pages/bagTab/function_buy_and_delivery.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class ProductSelection extends StatefulWidget {
   const ProductSelection({super.key});
-  // ProductSelection({Key? key}) : super(key: key);
 
   @override
   State<ProductSelection> createState() => _ProductSelectionState();
@@ -21,185 +22,91 @@ class _ProductSelectionState extends State<ProductSelection> {
     letterSpacing: 0.5,
     color: Color.fromRGBO(19, 59, 119, 1.0),
   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBody: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            change = !change;
-          });
-          if (change == false) {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return Stack(
-                  children: [
-                    Positioned(
-                      bottom: 70,
-                      child: AlertDialog(
-                        title: const Text('Заказ'),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              setState(() {
-                                change = true;
-                              });
-                              Navigator.of(context).pop();
-                            },
-                            child: const Text('OK'),
-                          ),
-                        ],
-                        content: Expanded(
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 56.0,
-                                    width: 56.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius:
-                                          BorderRadiusDirectional.circular(
-                                              10.0),
-                                      color: const Color.fromRGBO(
-                                          15, 196, 148, 1.0),
-                                    ),
-                                    child: FittedBox(
-                                      fit: BoxFit.none,
-                                      child: SvgPicture.asset(
-                                        "assetsDelivery/assetsSvg/buy111.svg",
-                                      ),
-                                    ),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const FunctionBuyAndDelivery(),
-                                        ),
-                                      );
-                                    },
-                                    child: Text(
-                                      'Заказать покупку и доставку',
-                                      style: textStyle,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              globals.sizedBoxHeight10px,
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 56.0,
-                                    width: 56.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius:
-                                          BorderRadiusDirectional.circular(
-                                              10.0),
-                                      color: const Color.fromRGBO(
-                                          0, 102, 255, 1.0),
-                                    ),
-                                    child: FittedBox(
-                                      fit: BoxFit.none,
-                                      child: SvgPicture.asset(
-                                        "assetsBag/assetsSvg/box.svg",
-                                      ),
-                                    ),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Заказать только  доставку',
-                                      style: textStyle,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              globals.sizedBoxHeight10px,
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 56.0,
-                                    width: 56.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius:
-                                          BorderRadiusDirectional.circular(
-                                              10.0),
-                                      color: const Color.fromRGBO(
-                                          19, 59, 119, 1.0),
-                                    ),
-                                    child: FittedBox(
-                                      fit: BoxFit.none,
-                                      child: SvgPicture.asset(
-                                        "assetsBag/assetsSvg/camera.svg",
-                                      ),
-                                    ),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Заказать по фотогафии',
-                                      style: textStyle,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => Container(
+              color: Colors.white,
+              height: 275,
+              child: Column(
+                children: [
+                  globals.sizedBoxHeight10px,
+                  OrderWidget(
+                    svgColor: const Color.fromRGBO(15, 196, 148, 1.0),
+                    svgPicture: "assetsDelivery/assetsSvg/buy111.svg",
+                    textButtonOnPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>const FunctionBuyAndDelivery(),
                         ),
-                      ),
-                    ),
-                  ],
-                );
-              },
-            );
-          }
+                      );
+                    },
+                    textTextButton: 'Заказать покупку и доставку',
+                    textStyle: textStyle,
+                  ),
+                  globals.sizedBoxHeight10px,
+                  OrderWidget(
+                    svgColor: const Color.fromRGBO(0, 102, 255, 1.0),
+                    svgPicture: "assetsBag/assetsSvg/box.svg",
+                    textButtonOnPressed: () {},
+                    textTextButton: 'Заказать только  доставку',
+                    textStyle: textStyle,
+                  ),
+                  globals.sizedBoxHeight10px,
+                  OrderWidget(
+                    svgColor: const Color.fromRGBO(19, 59, 119, 1.0),
+                    svgPicture: "assetsBag/assetsSvg/camera.svg",
+                    textButtonOnPressed: () {},
+                    textTextButton: 'Заказать по фотогафии',
+                    textStyle: textStyle,
+                  ),
+                  const SizedBox(
+                    height: 25.0,
+                  ),
+                  BottomAppBarWidget(
+                    imageFirst: 'assetsBag/assetsSvg/notActivehome.svg',
+                    imageTwo: "assetsBag/assetsSvg/activeBag.svg",
+                    svgwidget: "assetsBag/assetsSvg/blueCircle3.svg",
+                    imageThree: "assetsBag/assetsSvg/invoice.svg",
+                    imageFor: "assetsDelivery/assetsSvg/profile.svg",
+                    onPressedFirst: () {},
+                    onPressedTwo: () {},
+                    onPressedThree: () {},
+                    onPressedFor: () {},
+                  ),
+                ],
+              ),
+            ),
+          );
         },
-        backgroundColor: change
-            ? const Color.fromRGBO(15, 196, 148, 1.0)
-            : const Color.fromRGBO(19, 59, 119, 1),
-        child: change
-            ? SvgPicture.asset("assetsDelivery/assetsSvg/+.svg")
-            : SvgPicture.asset("assetsBag/assetsSvg/blue+.svg"),
+        backgroundColor: const Color.fromRGBO(15, 196, 148, 1.0),
+        child: SvgPicture.asset(
+          "assetsDelivery/assetsSvg/+.svg",
+        ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: CustomFloatingActionButtonLocation(
+        bottom: 68,
+        left: 177.5,
+      ),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: const Color.fromARGB(255, 232, 235, 241),
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsBag/assetsSvg/notActivehome.svg"),
-              ),
-              IconButton(
-                onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const StoreCatalog(),
-                  //   ),
-                  // );
-                },
-                icon: SvgPicture.asset("assetsBag/assetsSvg/activeBag.svg"),
-              ),
-              globals.sizedBoxWidth40px,
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsBag/assetsSvg/invoice.svg"),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/profile.svg"),
-              ),
-            ],
-          ),
+        clipBehavior: Clip.none,
+        elevation: 0,
+        child: BottomAppBarWidget(
+          imageFirst: 'assetsBag/assetsSvg/notActivehome.svg',
+          imageTwo: "assetsBag/assetsSvg/activeBag.svg",
+          imageThree: "assetsBag/assetsSvg/invoice.svg",
+          imageFor: "assetsDelivery/assetsSvg/profile.svg",
+          onPressedTwo: () {},
+          onPressedThree: () {},
+          onPressedFor: () {},
         ),
       ),
       body: Padding(
@@ -210,7 +117,9 @@ class _ProductSelectionState extends State<ProductSelection> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SvgPicture.asset("assetsDelivery/assetsSvg/notification.svg"),
+                SvgPicture.asset(
+                  "assetsDelivery/assetsSvg/notification.svg",
+                ),
                 const TextWidgets(
                   text: 'FromUSA',
                   fontFamily: "Lato",
@@ -219,7 +128,9 @@ class _ProductSelectionState extends State<ProductSelection> {
                   color: Color.fromRGBO(20, 63, 126, 1),
                   letterSpacing: 0.5,
                 ),
-                SvgPicture.asset("assetsBag/assetsSvg/infoSquare.svg"),
+                SvgPicture.asset(
+                  "assetsBag/assetsSvg/infoSquare.svg",
+                ),
               ],
             ),
             Row(
@@ -239,7 +150,10 @@ class _ProductSelectionState extends State<ProductSelection> {
               context,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 50.0, right: 50.0),
+              padding: const EdgeInsets.only(
+                left: 50.0,
+                right: 50.0,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -334,13 +248,74 @@ Widget selectedProduct(
         left: 20.0,
         bottom: 25.0,
         child: TextWidgets(
-            text: nameProduct,
-            fontFamily: "Lato",
-            fontSize: 14.0,
-            fontWeight: FontWeight.w700,
-            color: const Color.fromRGBO(0, 0, 1, 1.0),
-            letterSpacing: 1.0),
+          text: nameProduct,
+          fontFamily: "Lato",
+          fontSize: 14.0,
+          fontWeight: FontWeight.w700,
+          color: const Color.fromRGBO(0, 0, 1, 1.0),
+          letterSpacing: 1.0,
+        ),
       ),
     ],
   );
+}
+
+class OrderWidget extends StatelessWidget {
+  final Color svgColor;
+  final String svgPicture;
+  final Function() textButtonOnPressed;
+  final String textTextButton;
+  final TextStyle textStyle;
+  const OrderWidget(
+      {required this.svgColor,
+      required this.svgPicture,
+      required this.textButtonOnPressed,
+      required this.textTextButton,
+      required this.textStyle,
+      super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(
+        left: 10,
+        right: 25,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadiusDirectional.circular(
+          16.0,
+        ),
+        color: const Color.fromRGBO(248, 250, 253, 1),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            height: 56.0,
+            width: 56.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadiusDirectional.circular(
+                16.0,
+              ),
+              color: svgColor,
+            ),
+            child: FittedBox(
+              fit: BoxFit.none,
+              child: SvgPicture.asset(
+                svgPicture,
+              ),
+            ),
+          ),
+          globals.sizedBoxWidth20px,
+          TextButton(
+            onPressed: textButtonOnPressed,
+            child: Text(
+              textTextButton,
+              style: textStyle,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

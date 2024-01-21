@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
+import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
 import 'package:from_usa/helpWidgets/text_widget.dart';
 import 'package:from_usa/pages/bagTab/store_catalog_main_screen.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
@@ -34,7 +36,6 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
       TextEditingController();
   final TextEditingController _controllerprice = TextEditingController();
 
-
   void dropdownCountry(String? value) {
     if (value is String) {
       setState(() {
@@ -54,46 +55,34 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBody: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color.fromRGBO(15, 196, 148, 1.0),
         child: SvgPicture.asset("assetsDelivery/assetsSvg/+.svg"),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation:
+          CustomFloatingActionButtonLocation(bottom: 68, left: 177.5),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          color: const Color.fromARGB(255, 232, 235, 241),
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/home.svg"),
+        clipBehavior: Clip.none,
+        elevation: 0,
+        child: BottomAppBarWidget(
+          imageFirst: 'assetsBag/assetsSvg/notActivehome.svg',
+          imageTwo: "assetsBag/assetsSvg/activeBag.svg",
+          imageThree: "assetsBag/assetsSvg/invoice.svg",
+          imageFor: "assetsDelivery/assetsSvg/profile.svg",
+          onPressedFirst: () {},
+          onPressedTwo: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const StoreCatalog(),
               ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreCatalog(),
-                    ),
-                  );
-                },
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/bag.svg"),
-              ),
-              globals.sizedBoxWidth40px,
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/group.svg"),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset("assetsDelivery/assetsSvg/profile.svg"),
-              ),
-            ],
-          ),
+            );
+          },
+          onPressedThree: () {},
+          onPressedFor: () {},
         ),
       ),
       body: Padding(
@@ -172,7 +161,7 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
               height: 56.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(15.0),
-                color: const Color.fromARGB(255, 217, 227, 241),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
               child: DropdownButton(
                 padding: const EdgeInsets.only(left: 25.0, right: 25.0),
@@ -218,7 +207,7 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
               height: 56.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(15.0),
-                color: const Color.fromARGB(255, 217, 227, 241),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
               child: DropdownButton(
                 padding: const EdgeInsets.only(left: 25.0, right: 25.0),
@@ -263,7 +252,7 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
               height: 56.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(15.0),
-                color: const Color.fromARGB(255, 217, 227, 241),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
               child: TextField(
                 controller: _savedValueWeightParcels,
@@ -281,7 +270,7 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
               height: 56.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(15.0),
-                color: const Color.fromARGB(255, 217, 227, 241),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
               child: TextField(
                 controller: _controllerprice,
@@ -349,15 +338,22 @@ class _FunctionDeliveryRatesState extends State<FunctionDeliveryRates> {
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(15.0),
-                color: const Color.fromARGB(255, 217, 227, 241),
+                color: const Color.fromRGBO(248, 250, 253, 1),
               ),
-              child: const TextWidgets(
+              child: const Padding(
+                padding: EdgeInsets.only(
+                  left: 20.0,
+                  top: 10,
+                ),
+                child: TextWidgets(
                   text: "220.84\$",
                   fontFamily: "Lato",
                   fontSize: 30.0,
                   fontWeight: FontWeight.w800,
                   color: Color.fromRGBO(19, 59, 119, 1.0),
-                  letterSpacing: 0.5),
+                  letterSpacing: 0.5,
+                ),
+              ),
             ),
           ],
         ),

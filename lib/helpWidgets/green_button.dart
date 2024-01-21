@@ -7,7 +7,8 @@ class GreenButton extends StatelessWidget {
   final String? svg;
   final bool change;
   final dynamic textWidget;
-  const GreenButton({super.key, 
+  const GreenButton({
+    super.key,
     required this.fillColor,
     required this.onPressed,
     required this.change,
@@ -20,20 +21,22 @@ class GreenButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: 325,
-          height: 56,
+          width: 325.0,
+          height: 56.0,
           child: ElevatedButton(
             onPressed: onPressed,
             style: ElevatedButton.styleFrom(
               backgroundColor: fillColor,
               elevation: 0,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(
+                  16.0,
+                ),
               ),
             ),
             child: change == false
                 ? Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       textWidget ?? const SizedBox(),
                       svg != null ? SvgPicture.asset(svg!) : const SizedBox(),
@@ -41,12 +44,8 @@ class GreenButton extends StatelessWidget {
                   )
                 : Row(
                     children: [
-
                       Expanded(
-                        child: 
-
-                      textWidget ?? const SizedBox(),
-
+                        child: textWidget ?? const SizedBox(),
                       ),
                       svg != null ? SvgPicture.asset(svg!) : const SizedBox(),
                     ],
