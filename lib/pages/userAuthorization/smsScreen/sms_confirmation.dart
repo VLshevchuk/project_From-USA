@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:from_usa/pages/userAuthorization/WelcomeFromUsaScreen/welcome_from_usa_screen.dart';
 import 'package:from_usa/pages/userAuthorization/entranceScreen/entrance_screen.dart';
-import '../../../helpWidgets/green_button.dart';
+import '../../../help_widgets/green_button.dart';
 import '../../path/to/globals.dart' as globals;
 
-import '../../../helpWidgets/text_widget.dart';
+import '../../../help_widgets/text_widget.dart';
 
 class SmsConfirmation extends StatelessWidget {
   const SmsConfirmation({super.key});

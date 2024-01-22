@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:from_usa/helpWidgets/text_widget.dart';
+import 'package:from_usa/help_widgets/text_widget.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class RowWidget extends StatelessWidget {
@@ -8,12 +8,13 @@ class RowWidget extends StatelessWidget {
   final String svgpicture;
   final Color? color;
   final bool? a;
-  const RowWidget(
-      {super.key,
-      required this.text,
-      required this.svgpicture,
-      this.color,
-      this.a});
+  const RowWidget({
+    super.key,
+    required this.text,
+    required this.svgpicture,
+    this.color,
+    this.a,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +26,14 @@ class RowWidget extends StatelessWidget {
               svgpicture,
               width: 26.0,
               height: 24.0,
-              colorFilter: ColorFilter.mode(
-                color ?? Colors.black,
-                BlendMode.srcATop,
-              ),
+              // colorFilter: ColorFilter.mode(
+              //   // color ?? Colors.black,
+              //   // BlendMode.srcATop,
+              // ),
             ),
-            globals.sizedBoxWidth20px,
+            const SizedBox(
+              width: 10.0,
+            ),
             text,
           ],
         ),
@@ -38,7 +41,9 @@ class RowWidget extends StatelessWidget {
             ? Row(
                 children: [
                   globals.sizedBoxWidth40px,
-                  SvgPicture.asset("assetsDelivery/assetsSvg/newvector.svg"),
+                  SvgPicture.asset(
+                    "assetsDelivery/assetsSvg/newvector.svg",
+                  ),
                   TextButton(
                     onPressed: () {},
                     child: const TextLato14pxW700(
@@ -47,7 +52,7 @@ class RowWidget extends StatelessWidget {
                   ),
                 ],
               )
-            :const SizedBox()
+            : const SizedBox()
       ],
     );
   }

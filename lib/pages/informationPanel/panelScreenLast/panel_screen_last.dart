@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:from_usa/helpWidgets/text_widget.dart';
+import 'package:from_usa/help_widgets/text_widget.dart';
+
 import 'package:from_usa/pages/deliveryRegistrationPanel/delivery_main_screen.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
-import '../../../helpWidgets/green_button.dart';
-import '../../../helpWidgets/row_widget.dart';
+import '../../../help_widgets/green_button.dart';
+import '../../../help_widgets/row_widget.dart';
 
 class PanelScreenLast extends StatelessWidget {
   const PanelScreenLast({super.key});

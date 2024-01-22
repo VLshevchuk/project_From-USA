@@ -4,7 +4,7 @@ import 'package:from_usa/pages/informationPanel/panelScreenFour/panel_screen_fou
 import 'package:from_usa/pages/informationPanel/panelScreenTwo/panel_screen_two.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
-import '../../../helpWidgets/text_widget.dart';
+import '../../../help_widgets/text_widget.dart';
 
 class PanelScreenThree extends StatelessWidget {
   const PanelScreenThree({super.key});

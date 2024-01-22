@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:from_usa/helpWidgets/green_button.dart';
+import 'package:from_usa/help_widgets/green_button.dart';
 import 'package:from_usa/pages/userAuthorization/registerScreen/register_screen.dart';
-import '../../../helpWidgets/text_widget.dart';
+import '../../../help_widgets/text_widget.dart';
 
-import '../../../helpWidgets/entry_field.dart';
+import '../../../help_widgets/entry_field.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 import 'package:flutter_svg/flutter_svg.dart';
 

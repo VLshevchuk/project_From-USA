@@ -3,9 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:from_usa/pages/userAuthorization/SmsScreen/sms_confirmation.dart';
 import 'package:from_usa/pages/userAuthorization/entranceScreen/entrance_screen.dart';
 
-import '../../../helpWidgets/entry_field.dart';
-import '../../../helpWidgets/green_button.dart';
-import '../../../helpWidgets/text_widget.dart';
+import '../../../help_widgets/entry_field.dart';
+import '../../../help_widgets/green_button.dart';
+import '../../../help_widgets/text_widget.dart';
 
 import '../../path/to/globals.dart' as globals;
 

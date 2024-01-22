@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:from_usa/help_widgets/text_widget.dart';
 import 'package:from_usa/pages/informationPanel/panelScreenTwo/panel_screen_two.dart';
-import '../../../helpWidgets/text_widget.dart';
 
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 

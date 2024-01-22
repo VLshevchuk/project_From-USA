@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
-import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
-import 'package:from_usa/helpWidgets/text_widget.dart';
-import 'package:from_usa/pages/bagTab/product_selection.dart';
+import 'package:from_usa/help_widgets/bottom_app_bar/bottom_appBar_widget.dart';
+import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_button_location.dart';
+import 'package:from_usa/help_widgets/text_widget.dart';
+import 'package:from_usa/pages/bag_tab/product_selection.dart';
 import 'package:from_usa/pages/deliveryRegistrationPanel/delivery_main_screen.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:from_usa/helpWidgets/BottomAppBar/bottom_appBar_widget.dart';
-import 'package:from_usa/helpWidgets/BottomAppBar/customfloating_action_button_location.dart';
-import 'package:from_usa/helpWidgets/text_widget.dart';
-import 'package:from_usa/pages/bagTab/function_buy_and_delivery.dart';
+import 'package:from_usa/help_widgets/bottom_app_bar/bottom_appBar_widget.dart';
+import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_button_location.dart';
+import 'package:from_usa/help_widgets/text_widget.dart';
+import 'package:from_usa/pages/bag_tab/function_buy_and_delivery.dart';
+import 'package:from_usa/pages/bag_tab/making_delivery_only/making_delivery_only.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class ProductSelection extends StatefulWidget {
@@ -45,7 +46,7 @@ class _ProductSelectionState extends State<ProductSelection> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>const FunctionBuyAndDelivery(),
+                          builder: (context) => const FunctionBuyAndDelivery(),
                         ),
                       );
                     },
@@ -56,7 +57,14 @@ class _ProductSelectionState extends State<ProductSelection> {
                   OrderWidget(
                     svgColor: const Color.fromRGBO(0, 102, 255, 1.0),
                     svgPicture: "assetsBag/assetsSvg/box.svg",
-                    textButtonOnPressed: () {},
+                    textButtonOnPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>  MakingDeliveryOnly(),
+                        ),
+                      );
+                    },
                     textTextButton: 'Заказать только  доставку',
                     textStyle: textStyle,
                   ),
@@ -237,7 +245,6 @@ Widget selectedProduct(
             width: 2.0,
             color: const Color.fromRGBO(248, 250, 253, 1),
           ),
-          // color: const Color.fromARGB(255, 241, 244, 250),
         ),
         child: Image.asset(
           imgString,

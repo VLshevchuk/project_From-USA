@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:from_usa/pages/informationPanel/panelScreenLast/panel_screen_last.dart';
 import 'package:from_usa/pages/informationPanel/panelScreenFour/panel_screen_four.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
-import 'package:from_usa/helpWidgets/row_widget.dart';
-import 'package:from_usa/helpWidgets/text_widget.dart';
+import 'package:from_usa/help_widgets/row_widget.dart';
+import 'package:from_usa/help_widgets/text_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 

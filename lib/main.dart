@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:from_usa/pages/bagTab/product_selection.dart';
-import 'package:from_usa/pages/bagTab/store_catalog_main_screen.dart';
+import 'package:from_usa/pages/bag_tab/making_apurchase_and_delivery/making_a_purchase_and_delivery.dart';
+import 'package:from_usa/pages/bag_tab/product_selection.dart';
+import 'package:from_usa/pages/bag_tab/store_catalog_main_screen.dart';
 import 'package:from_usa/pages/informationPanel/panelScreenFour/panel_screen_four.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
