@@ -13,7 +13,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:325.0,
+      // width:325.0,
       height: 56.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadiusDirectional.circular(
@@ -54,7 +54,7 @@ class TextFieldWideWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:325.0,
+      // width:325.0,
       height: 128.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadiusDirectional.circular(

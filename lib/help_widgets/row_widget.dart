@@ -6,13 +6,14 @@ import 'package:from_usa/pages/path/to/globals.dart' as globals;
 class RowWidget extends StatelessWidget {
   final Widget text;
   final String svgpicture;
-  final Color? color;
+  final Color color;
   final bool? a;
   const RowWidget({
     super.key,
     required this.text,
     required this.svgpicture,
-    this.color,
+    // this.color,
+    this.color = Colors.black,
     this.a,
   });
 
@@ -26,10 +27,10 @@ class RowWidget extends StatelessWidget {
               svgpicture,
               width: 26.0,
               height: 24.0,
-              // colorFilter: ColorFilter.mode(
-              //   // color ?? Colors.black,
-              //   // BlendMode.srcATop,
-              // ),
+              colorFilter: ColorFilter.mode(
+                color,
+                BlendMode.srcATop,
+              ),
             ),
             const SizedBox(
               width: 10.0,

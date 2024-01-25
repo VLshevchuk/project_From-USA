@@ -47,7 +47,7 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
     return Column(
       children: [
         Container(
-          width: 325.0,
+          // width: 325.0,
           height: 56.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadiusDirectional.circular(15.0),

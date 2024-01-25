@@ -26,72 +26,87 @@ class BottomAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Container(
-          height: 50,
-          width: 355.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            color: Colors.white,
-            image: const DecorationImage(
-                image: AssetImage("assetsBag/assetsImage/rectangle.png"),
-                fit: BoxFit.none,
-                alignment: Alignment.topCenter),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: onPressedFirst,
-                icon: SvgPicture.asset(
-                  imageFirst,
-                ),
-              ),
-              IconButton(
-                onPressed: onPressedTwo,
-                icon: SvgPicture.asset(
-                  imageTwo,
-                ),
-              ),
-              globals.sizedBoxWidth40px,
-              if (svgwidget != null)
-                Padding(
-                  padding: const EdgeInsets.only(right: 40.0),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: SizedBox(
-                      width: 83,
-                      height: 83,
-                      child: SvgPicture.asset(
-                        svgwidget!,
-                        fit: BoxFit.cover,
-                        clipBehavior: Clip.none,
-                      ),
-                    ),
-                  ),
-                )
-              else
-                const SizedBox(),
-              IconButton(
-                onPressed: onPressedThree,
-                icon: SvgPicture.asset(
-                  imageThree,
-                ),
-              ),
-              IconButton(
-                onPressed: onPressedFor,
-                icon: SvgPicture.asset(
-                  imageFor,
-                ),
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: Container(
+        height: 50,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: Colors.white,
+          image: const DecorationImage(
+            image: AssetImage("assetsBag/assetsImage/rectangle.png"),
+            fit: BoxFit.cover,
+            alignment: Alignment.topCenter,
           ),
         ),
-      ],
+        child: Row(
+          children: [
+            Expanded(
+              flex: 15,
+              child: Row(
+                children: [
+                  globals.sizedBoxWidth30px,
+                  IconButton(
+                    onPressed: onPressedFirst,
+                    icon: SvgPicture.asset(
+                      imageFirst,
+                    ),
+                  ),
+                  globals.sizedBoxWidth20px,
+                  IconButton(
+                    onPressed: onPressedTwo,
+                    icon: SvgPicture.asset(
+                      imageTwo,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            if (svgwidget != null)
+              Padding(
+                padding: const EdgeInsets.only(right: 40.0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: SizedBox(
+                    width: 83,
+                    height: 83,
+                    child: SvgPicture.asset(
+                      svgwidget!,
+                      fit: BoxFit.cover,
+                      clipBehavior: Clip.none,
+                    ),
+                  ),
+                ),
+              )
+            else
+              const SizedBox(),
+            Expanded(
+              flex: 15,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IconButton(
+                    onPressed: onPressedThree,
+                    icon: SvgPicture.asset(
+                      imageThree,
+                    ),
+                  ),
+                  globals.sizedBoxWidth20px,
+                  IconButton(
+                    onPressed: onPressedFor,
+                    icon: SvgPicture.asset(
+                      imageFor,
+                    ),
+                  ),
+                  globals.sizedBoxWidth30px,
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

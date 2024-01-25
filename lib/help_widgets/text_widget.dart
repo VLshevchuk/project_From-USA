@@ -42,11 +42,12 @@ class TextLato14pxW700 extends StatelessWidget {
     return Text(
       text,
       style: const TextStyle(
-          fontFamily: "Lato",
-          fontSize: 14.0,
-          fontWeight: FontWeight.w700,
-          color: Color.fromRGBO(19, 59, 119, 1.0),
-          letterSpacing: 1.0),
+        fontFamily: "Lato",
+        fontSize: 14.0,
+        fontWeight: FontWeight.w700,
+        color: Color.fromRGBO(19, 59, 119, 1.0),
+        letterSpacing: 1.0,
+      ),
     );
   }
 }

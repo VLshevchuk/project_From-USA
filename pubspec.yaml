@@ -145,6 +145,24 @@ flutter:
     - assetsBag/assetsSvg/checkGreen.svg
     - assetsBag/assetsSvg/lineblue.svg
     - assetsBag/assetsSvg/leftBack.svg
+    - assetsBag/assetsSvg/greenPlus2.svg
+    - assetsBag/assetsSvg/copyIcon.svg
+    # Profile assets
+    - assets_profile/assetsSvg/address7.svg
+    - assets_profile/assetsSvg/credit-card7.svg
+    - assets_profile/assetsSvg/graph7.svg
+    - assets_profile/assetsSvg/list7.svg
+    - assets_profile/assetsSvg/location7.svg
+    - assets_profile/assetsSvg/notification7.svg
+    - assets_profile/assetsSvg/setting7.svg
+    - assets_profile/assetsSvg/wallet7.svg
+    - assets_profile/assetsImg/ellipse7.png
+    - assets_profile/assetsSvg/edit_quare7.svg
+    - assets_profile/assetsImg/1image7.png
+    - assets_profile/assetsImg/2image7.png
+    - assets_profile/assetsImg/3image7.png
+    - assets_profile/assetsSvg/box_bottom.svg
+    - assets_profile/assetsSvg/profile_bottom.svg
 
 
 
@@ -153,64 +171,6 @@ flutter:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-    
 
 
 
