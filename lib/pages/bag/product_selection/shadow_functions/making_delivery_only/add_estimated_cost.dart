@@ -6,7 +6,7 @@ import 'package:from_usa/help_widgets/green_button.dart';
 import 'package:from_usa/help_widgets/row_widget.dart';
 import 'package:from_usa/help_widgets/text_field_widget.dart';
 import 'package:from_usa/help_widgets/text_widget.dart';
-import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/Information_about_warehouses/Information_about_warehouses.dart';
+import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/Information_about_warehouses/information_about_warehouses.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/making_delivery_only.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 

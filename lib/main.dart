@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/Information_about_warehouses/Information_about_warehouses.dart';
+import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/Information_about_warehouses/information_about_warehouses.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_apurchase_and_delivery/making_a_purchase_and_delivery.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/add_estimated_cost.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/add_invoice.dart';

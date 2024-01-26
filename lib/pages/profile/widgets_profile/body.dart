@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 import 'package:from_usa/pages/profile/subscreens_profile/correction_profile/correction_profile.dart';
-import 'package:path/path.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -211,7 +210,7 @@ Widget orderLater() {
       Container(
         height: 40.0,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(248, 250, 253, 1),
+          color: const Color.fromRGBO(248, 250, 253, 1),
           borderRadius: BorderRadius.circular(
             10.0,
           ),
@@ -268,7 +267,7 @@ Widget orderLater() {
       Container(
         height: 40.0,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(248, 250, 253, 1),
+          color: const Color.fromRGBO(248, 250, 253, 1),
           borderRadius: BorderRadius.circular(
             10.0,
           ),

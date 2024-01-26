@@ -163,6 +163,16 @@ flutter:
     - assets_profile/assetsImg/3image7.png
     - assets_profile/assetsSvg/box_bottom.svg
     - assets_profile/assetsSvg/profile_bottom.svg
+    - assets_profile/assetsSvg/male-sign-blue7.svg
+    - assets_profile/assetsSvg/femenine7.svg
+    - assets_profile/assetsSvg/password7.svg
+    - assets_profile/assetsSvg/logout7.svg
+    - assets_profile/assetsSvg/stroke7.svg
+
+
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class TextFieldWidget extends StatelessWidget {
   final String labelText;
@@ -17,9 +18,9 @@ class TextFieldWidget extends StatelessWidget {
       height: 56.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadiusDirectional.circular(
-          10.0,
+          16.0,
         ),
-        color: const Color.fromRGBO(248, 250, 253, 1),
+        color:const Color.fromRGBO(248, 250, 253, 1),
       ),
       child: TextField(
         decoration: InputDecoration(
@@ -38,6 +39,7 @@ class TextFieldWidget extends StatelessWidget {
             horizontal: 24.0,
           ),
         ),
+        style:globals.textStyleFW700WFFLatoFS16LS05
       ),
     );
   }
