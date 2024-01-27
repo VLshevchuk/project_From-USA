@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
-import 'package:from_usa/pages/profile/subscreens_profile/correction_profile/correction_profile.dart';
+import 'package:from_usa/pages/profile/subscreens_profile/bank_cards_function/bank_cards.dart';
+import 'package:from_usa/pages/profile/subscreens_profile/correction_function/correction_profile.dart';
+import 'package:from_usa/pages/profile/subscreens_profile/finance_function/finance_profile.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -19,7 +21,7 @@ class Body extends StatelessWidget {
         const SizedBox(
           height: 12.0,
         ),
-        functionTabs(),
+        functionTabs(context),
         const SizedBox(
           height: 68.0,
         ),
@@ -76,7 +78,7 @@ Widget profileContainer(BuildContext context) {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>const CorrectionProfile(),
+                builder: (context) => const CorrectionProfile(),
               ),
             );
           },
@@ -295,18 +297,32 @@ Widget orderLater() {
   );
 }
 
-Widget functionTabs() {
+Widget functionTabs(BuildContext context) {
   return Column(
     children: [
       rowTabs(
         "assets_profile/assetsSvg/wallet7.svg",
         "Финансы",
-        () {},
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>const FinanceProfile(),
+            ),
+          );
+        },
       ),
       rowTabs(
         "assets_profile/assetsSvg/credit-card7.svg",
         "Банковские карты",
-        () {},
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>const BankCards(),
+            ),
+          );
+        },
       ),
       rowTabs(
         "assets_profile/assetsSvg/location7.svg",

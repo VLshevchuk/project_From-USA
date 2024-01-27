@@ -76,7 +76,11 @@ class _CorrectionProfileState extends State<CorrectionProfile> {
         svgButton: () {},
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0, top: 18.0),
+        padding: const EdgeInsets.only(
+          left: 25.0,
+          right: 25.0,
+          top: 18.0,
+        ),
         child: SingleChildScrollView(
           child: Column(
             children: [
