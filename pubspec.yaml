@@ -177,6 +177,12 @@ flutter:
     - assets_profile/assetsSvg/card7.svg
     - assets_profile/assetsSvg/gray7.svg
     - assets_profile/assetsSvg/radioBlue7.svg
+    - assets_profile/assetsSvg/master.svg
+    - assets_profile/assetsSvg/visa.svg
+    - assets_profile/assetsSvg/plus7.svg
+
+
+
 
 
     
