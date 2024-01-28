@@ -4,11 +4,13 @@ class DropdownButtonWidget extends StatefulWidget {
   final String firstChoiceValue;
   final String twoChoiceValue;
   final String threeChoiceValue;
+  final String? hintText;
 
   const DropdownButtonWidget({super.key, 
     required this.firstChoiceValue,
     required this.twoChoiceValue,
     required this.threeChoiceValue,
+    this.hintText,
   });
 
   @override
@@ -47,7 +49,6 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
     return Column(
       children: [
         Container(
-          // width: 325.0,
           height: 56.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadiusDirectional.circular(15.0),
@@ -80,7 +81,7 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
               ),
             ],
             hint: Text(
-              'Выберите способ доставки',
+              widget.hintText ?? 'Пусто',
               style: notActive,
             ),
             onChanged: dropdownValue,
