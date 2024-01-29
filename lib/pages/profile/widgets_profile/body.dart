@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 import 'package:from_usa/pages/profile/subscreens_profile/bank_cards_function/bank_cards.dart';
 import 'package:from_usa/pages/profile/subscreens_profile/correction_function/correction_profile.dart';
+import 'package:from_usa/pages/profile/subscreens_profile/earn_money_function/earn_money.dart';
 import 'package:from_usa/pages/profile/subscreens_profile/finance_function/finance_profile.dart';
 import 'package:from_usa/pages/profile/subscreens_profile/recipient_addresses_function/recipient_addresses.dart';
 import 'package:from_usa/pages/profile/subscreens_profile/warehouse_addresses/warehouse_addresses_function.dart';
@@ -353,7 +354,14 @@ Widget functionTabs(BuildContext context) {
       rowTabs(
         "assets_profile/assetsSvg/graph7.svg",
         "Зарабатывайте c нами",
-        () {},
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const EarnMoney(),
+            ),
+          );
+        },
       ),
       rowTabs(
         "assets_profile/assetsSvg/list7.svg",
