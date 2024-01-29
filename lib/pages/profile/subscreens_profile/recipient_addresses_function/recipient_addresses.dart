@@ -9,7 +9,8 @@ import 'package:from_usa/pages/bag/store_catalog_main_screen.dart';
 import 'package:from_usa/pages/home/delivery_main_screen.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 import 'package:from_usa/pages/profile/profile_main.dart';
-import 'package:from_usa/pages/profile/subscreens_profile/bank_cards_function/select_card.dart';
+import 'package:from_usa/pages/profile/subscreens_profile/recipient_addresses_function/selecting_the_recipients_address.dart';
+
 
 class RecipientAddresses extends StatefulWidget {
   const RecipientAddresses({super.key});
@@ -251,7 +252,7 @@ class _RecipientAddressesState extends State<RecipientAddresses> {
                           ? Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SelectCard(),
+                                builder: (context) => const SelectTheRecipientsAddress(),
                               ),
                             )
                           : null;

@@ -180,6 +180,11 @@ flutter:
     - assets_profile/assetsSvg/master.svg
     - assets_profile/assetsSvg/visa.svg
     - assets_profile/assetsSvg/plus7.svg
+    - assets_profile/assetsImg/radio777.png
+    - assets_profile/assetsImg/radioGray777.png
+
+
+
 
 
 

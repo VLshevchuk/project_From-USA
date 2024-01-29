@@ -18,6 +18,8 @@ SizedBox sizedBoxWidth25px = const SizedBox(width: 25);
 
 SizedBox sizedBoxWidth40px = const SizedBox(width: 40);
 
+SizedBox sizedBoxHeight6px = const SizedBox(height: 6);
+
 SizedBox sizedBoxHeight10px = const SizedBox(height: 10);
 SizedBox sizedBoxHeight20px = const SizedBox(height: 20);
 SizedBox sizedBoxHeight30px = const SizedBox(height: 30);

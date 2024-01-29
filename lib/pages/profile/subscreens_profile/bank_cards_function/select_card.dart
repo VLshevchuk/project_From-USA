@@ -20,7 +20,7 @@ class SelectCard extends StatefulWidget {
 class _SelectCardState extends State<SelectCard> {
   bool changeActiveCard = false;
   bool switchSelect = false;
-  bool add = false;
+  bool cardAdd = false;
   List<Widget> cards = [];
 
   @override
@@ -178,7 +178,7 @@ class _SelectCardState extends State<SelectCard> {
                 ],
               ),
             ),
-            add
+            cardAdd
                 ? Column(
                     children: cards,
                   )
@@ -194,7 +194,7 @@ class _SelectCardState extends State<SelectCard> {
                   onTap: () {
                     setState(
                       () {
-                        add = true;
+                        cardAdd = true;
                         cards.add(
                           addCard(),
                         );

@@ -5,6 +5,7 @@ import 'package:from_usa/pages/profile/subscreens_profile/bank_cards_function/ba
 import 'package:from_usa/pages/profile/subscreens_profile/correction_function/correction_profile.dart';
 import 'package:from_usa/pages/profile/subscreens_profile/finance_function/finance_profile.dart';
 import 'package:from_usa/pages/profile/subscreens_profile/recipient_addresses_function/recipient_addresses.dart';
+import 'package:from_usa/pages/profile/subscreens_profile/warehouse_addresses/warehouse_addresses_function.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -340,7 +341,14 @@ Widget functionTabs(BuildContext context) {
       rowTabs(
         "assets_profile/assetsSvg/address7.svg",
         "Адреса складов",
-        () {},
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const WarehouseAddress(),
+            ),
+          );
+        },
       ),
       rowTabs(
         "assets_profile/assetsSvg/graph7.svg",
