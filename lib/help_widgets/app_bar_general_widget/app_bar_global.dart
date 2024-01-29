@@ -3,16 +3,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
   final Function()? backPage;
-  final String imageLeft;
+  final String? imageLeft;
   final Widget textWidget;
   final String imageRight;
   final Function()? svgButton;
   const AppBarGlobal(
       {required this.backPage,
-      required this.imageLeft,
       required this.textWidget,
       required this.imageRight,
       required this.svgButton,
+       this.imageLeft,
+
       super.key});
 
   @override
@@ -30,9 +31,11 @@ class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
         children: [
           InkWell(
             onTap: backPage,
-            child: SvgPicture.asset(
-              imageLeft,
-            ),
+            child:
+            imageLeft!=null?
+             SvgPicture.asset(
+              imageLeft!,
+            ):SizedBox(),
           ),
           textWidget,
           IconButton(

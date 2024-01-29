@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/Information_about_warehouses/information_about_warehouses.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_apurchase_and_delivery/making_a_purchase_and_delivery.dart';
 import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/add_estimated_cost.dart';
@@ -8,6 +9,7 @@ import 'package:from_usa/pages/bag/store_catalog_main_screen.dart';
 import 'package:from_usa/pages/informationPanel/panelScreenFirst/panelScreenTwo/panelScreenThree/panelScreenFour/panel_screen_four.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 import 'package:from_usa/pages/profile/profile_main.dart';
+import 'package:from_usa/pages/userAuthorization/welcomeFromUsaScreen/welcome_from_usa_screen.dart';
 
 import 'pages/bag/product_selection/shadow_functions/making_delivery_only/making_delivery_only.dart';
 import 'pages/home/delivery_main_screen.dart';
@@ -18,7 +20,8 @@ import 'pages/informationPanel/panelScreenFirst/panelScreenTwo/panelScreenThree/
 
 void main() {
   runApp(
-     const MaterialApp(
+  const  MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     ),
   );
@@ -29,8 +32,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     globals.updateScreenSize(context);
-    return const Scaffold(
-      body: ProfileMain(),
+    return const AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+        statusBarColor: Colors.white,
+        systemNavigationBarColor: Colors.white,
+      ),
+      child: Scaffold(
+        body: DeliveryMainScreen(),
+      ),
     );
   }
 }

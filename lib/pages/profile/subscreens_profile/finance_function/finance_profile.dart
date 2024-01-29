@@ -144,7 +144,9 @@ class _FinanceProfileState extends State<FinanceProfile> {
                     // color: Colors.yellow,
                     // ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24.0),
+                      borderRadius: BorderRadius.circular(
+                        24.0,
+                      ),
                       color: const Color.fromRGBO(15, 196, 148, 1),
                     ),
                     child: Center(
@@ -166,7 +168,6 @@ class _FinanceProfileState extends State<FinanceProfile> {
               ],
             ),
             globals.sizedBoxHeight30px,
-
             Row(
               children: [
                 SvgPicture.asset(
@@ -207,14 +208,11 @@ class _FinanceProfileState extends State<FinanceProfile> {
               ),
             ),
             globals.sizedBoxHeight20px,
-
             paymentTransactionsContainer(),
             globals.sizedBoxHeight10px,
             paymentTransactionsContainer(),
             globals.sizedBoxHeight10px,
-
             paymentTransactionsContainer(),
-
           ],
         ),
       ),

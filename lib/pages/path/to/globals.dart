@@ -54,6 +54,14 @@ TextStyle textStyleFW700WFFLatoFS16LS05 = const TextStyle(
   color: Color.fromRGBO(19, 59, 119, 1),
 );
 
+TextStyle textStyleFW700WFFLatoFS14LS05 = const TextStyle(
+  fontWeight: FontWeight.w700,
+  fontFamily: 'Lato',
+  fontSize: 14.0,
+  letterSpacing: 0.5,
+  color: Color.fromRGBO(19, 59, 119, 1),
+);
+
 TextStyle textStyleFW400WFFLatoFS14LS1 = const TextStyle(
   fontWeight: FontWeight.w400,
   fontFamily: 'Lato',
