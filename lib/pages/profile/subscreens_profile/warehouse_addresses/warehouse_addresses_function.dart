@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:from_usa/help_widgets/app_bar_general_widget/app_bar_global.dart';
 import 'package:from_usa/help_widgets/bottom_app_bar/bottom_app_bar_widget.dart';
 import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_button_location.dart';
-import 'package:from_usa/pages/bag/store_catalog_main_screen.dart';
-import 'package:from_usa/pages/home/delivery_main_screen.dart';
+import 'package:from_usa/pages/bag/main_page.dart';
+import 'package:from_usa/pages/home/main_page.dart';
 import 'package:from_usa/pages/profile/profile_main.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 

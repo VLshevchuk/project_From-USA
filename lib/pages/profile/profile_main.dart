@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:from_usa/help_widgets/bottom_app_bar/bottom_app_bar_widget.dart';
 import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_button_location.dart';
-import 'package:from_usa/pages/bag/store_catalog_main_screen.dart';
-import 'package:from_usa/pages/home/delivery_main_screen.dart';
+import 'package:from_usa/pages/bag/main_page.dart';
+import 'package:from_usa/pages/home/main_page.dart';
 import 'package:from_usa/pages/profile/widgets_profile/app_bar.dart';
 import 'package:from_usa/pages/profile/widgets_profile/body.dart';
 

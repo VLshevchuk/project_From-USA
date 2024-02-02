@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:from_usa/pages/userAuthorization/loginScreen/login_screen.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
+import 'package:from_usa/pages/userAuthorization/login_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -8,7 +8,9 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 178.0),
+      padding: const EdgeInsets.only(
+        top: 178.0,
+      ),
       child: Center(
         child: Column(
           children: [

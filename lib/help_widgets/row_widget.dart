@@ -8,13 +8,14 @@ class RowWidget extends StatelessWidget {
   final String svgpicture;
   final Color color;
   final bool? a;
+  final MainAxisAlignment? mainAxisAlignment;
   const RowWidget({
     super.key,
     required this.text,
     required this.svgpicture,
     // this.color,
     this.color = Colors.black,
-    this.a,
+    this.a, this.mainAxisAlignment,
   });
 
   @override
@@ -22,6 +23,7 @@ class RowWidget extends StatelessWidget {
     return Column(
       children: [
         Row(
+          mainAxisAlignment: mainAxisAlignment??MainAxisAlignment.start,
           children: [
             SvgPicture.asset(
               svgpicture,

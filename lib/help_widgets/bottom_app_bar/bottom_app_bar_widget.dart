@@ -27,21 +27,32 @@ class BottomAppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+      padding: const EdgeInsets.only(
+        left: 10,
+        right: 10,
+        bottom: 10,
+      ),
       child: Container(
         height: 50,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(
+            10.0,
+          ),
           boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(119, 19, 94, 0.2),
-              offset: Offset(0, 30),
+              offset: Offset(
+                0,
+                30,
+              ),
               blurRadius: 30.0,
               spreadRadius: -19,
             ),
           ],
           image: const DecorationImage(
-            image: AssetImage("assetsBag/assetsImage/rectangle.png"),
+            image: AssetImage(
+              "assetsBag/assetsImage/rectangle.png",
+            ),
             fit: BoxFit.cover,
             alignment: Alignment.topCenter,
           ),
@@ -71,7 +82,9 @@ class BottomAppBarWidget extends StatelessWidget {
             ),
             if (svgwidget != null)
               Padding(
-                padding: const EdgeInsets.only(right: 40.0),
+                padding: const EdgeInsets.only(
+                  right: 40.0,
+                ),
                 child: InkWell(
                   onTap: () {
                     Navigator.pop(context);

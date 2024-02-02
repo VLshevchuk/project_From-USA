@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:from_usa/pages/informationPanel/panelScreenFirst/panel_screen_first.dart';
+import 'package:from_usa/pages/informationPanel/part_screen_one.dart';
 import '../../../help_widgets/green_button.dart';
 import '../../../help_widgets/text_widget.dart';
 import '../../path/to/globals.dart' as globals;
@@ -54,7 +54,7 @@ class WelcomeFromUsaScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const PanelScreenFirst(),
+                        builder: (context) => const PartScreenOne(),
                       ),
                     );
                   },

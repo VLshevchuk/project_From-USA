@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/Information_about_warehouses/information_about_warehouses.dart';
-import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_apurchase_and_delivery/making_a_purchase_and_delivery.dart';
-import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/add_estimated_cost.dart';
-import 'package:from_usa/pages/bag/product_selection/shadow_functions/making_delivery_only/add_invoice.dart';
-import 'package:from_usa/pages/bag/product_selection/product_selection.dart';
-import 'package:from_usa/pages/bag/store_catalog_main_screen.dart';
-import 'package:from_usa/pages/informationPanel/panelScreenFirst/panelScreenTwo/panelScreenThree/panelScreenFour/panel_screen_four.dart';
+import 'package:from_usa/pages/bag/making_apurchase_and_delivery_page/making_a_purchase_and_delivery_page.dart';
+import 'package:from_usa/pages/bag/making_delivery_only_page/add_estimated_cost_page.dart';
+import 'package:from_usa/pages/bag/making_delivery_only_page/widgets/add_invoice.dart';
+import 'package:from_usa/pages/bag/product_selection_page.dart';
+import 'package:from_usa/pages/bag/main_page.dart';
+import 'package:from_usa/pages/informationPanel/part_screen_four.dart';
+import 'package:from_usa/pages/informationPanel/part_screen_one.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 import 'package:from_usa/pages/profile/profile_main.dart';
 import 'package:from_usa/pages/userAuthorization/welcomeFromUsaScreen/welcome_from_usa_screen.dart';
 
-import 'pages/bag/product_selection/shadow_functions/making_delivery_only/making_delivery_only.dart';
-import 'pages/home/delivery_main_screen.dart';
-import 'pages/home/function_delivery_only/function_delivery_only.dart';
-import 'pages/home/function_delivery_rates/function_delivery_rates.dart';
-import 'pages/home/function_purchase_and_delivery/function_purchase_and_delivery.dart';
-import 'pages/informationPanel/panelScreenFirst/panelScreenTwo/panelScreenThree/panelScreenFour/panelScreenLast/panel_screen_last.dart';
+import 'pages/bag/buy_and_delivery_page.dart';
+import 'pages/bag/making_delivery_only_page/information_about_warehouses_page.dart';
+import 'pages/bag/making_delivery_only_page/making_delivery_only_page.dart';
+import 'pages/home/main_page.dart';
+import 'pages/home/delivery_only_page.dart';
+import 'pages/home/delivery_rates_page.dart';
+import 'pages/home/purchase_and_delivery_page.dart';
+import 'pages/informationPanel/part_screen_five.dart';
 
 void main() {
   runApp(
@@ -38,7 +40,7 @@ class HomeScreen extends StatelessWidget {
         systemNavigationBarColor: Colors.white,
       ),
       child: Scaffold(
-        body: DeliveryMainScreen(),
+        body: StoreCatalog(),
       ),
     );
   }
