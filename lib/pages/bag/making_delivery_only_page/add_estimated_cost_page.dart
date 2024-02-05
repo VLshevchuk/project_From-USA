@@ -11,7 +11,9 @@ import 'package:from_usa/pages/bag/making_delivery_only_page/making_delivery_onl
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class AddEstimatedCostPage extends StatefulWidget {
-  const AddEstimatedCostPage({super.key});
+  const AddEstimatedCostPage({
+    super.key,
+  });
 
   @override
   State<AddEstimatedCostPage> createState() => _AddEstimatedCostStatePage();
@@ -58,7 +60,7 @@ class _AddEstimatedCostStatePage extends State<AddEstimatedCostPage> {
               SvgPicture.asset(
                 "assetsBag/assetsSvg/green_stripe.svg",
                 colorFilter: const ColorFilter.mode(
-                  Color.fromRGBO(19, 59, 119, 1),
+                  Color.fromRGBO(19, 59, 119, 1.0),
                   BlendMode.srcATop,
                 ),
               ),
@@ -71,7 +73,7 @@ class _AddEstimatedCostStatePage extends State<AddEstimatedCostPage> {
                   fontFamily: 'Lato',
                   fontSize: 16.0,
                   fontWeight: FontWeight.w700,
-                  color: Color.fromRGBO(19, 59, 119, 1),
+                  color: Color.fromRGBO(19, 59, 119, 1.0),
                   letterSpacing: 0.6,
                 ),
                 svgpicture: 'assetsBag/assetsSvg/cart_home.svg',
@@ -86,7 +88,7 @@ class _AddEstimatedCostStatePage extends State<AddEstimatedCostPage> {
                       : SvgPicture.asset(
                           "assetsPanel/assetsSvg/radioWhite.svg",
                           colorFilter: const ColorFilter.mode(
-                            Color.fromRGBO(248, 250, 253, 1),
+                            Color.fromRGBO(248, 250, 253, 1.0),
                             BlendMode.srcATop,
                           ),
                         ),
@@ -135,7 +137,7 @@ class _AddEstimatedCostStatePage extends State<AddEstimatedCostPage> {
                       ? SvgPicture.asset(
                           "assetsPanel/assetsSvg/radioWhite.svg",
                           colorFilter: const ColorFilter.mode(
-                            Color.fromRGBO(248, 250, 253, 1),
+                            Color.fromRGBO(248, 250, 253, 1.0),
                             BlendMode.srcATop,
                           ),
                         )
@@ -313,8 +315,10 @@ class _AddEstimatedCostStatePage extends State<AddEstimatedCostPage> {
                 width: 328.0,
                 height: 60.0,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadiusDirectional.circular(15.0),
-                  color: const Color.fromRGBO(248, 250, 253, 1),
+                  borderRadius: BorderRadiusDirectional.circular(
+                    15.0,
+                  ),
+                  color: const Color.fromRGBO(248, 250, 253, 1.0),
                 ),
                 child: const Padding(
                   padding: EdgeInsets.only(
@@ -342,7 +346,8 @@ class _AddEstimatedCostStatePage extends State<AddEstimatedCostPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const InformationAboutWarehousesPage(),
+                        builder: (context) =>
+                            const InformationAboutWarehousesPage(),
                       ),
                     );
                   },

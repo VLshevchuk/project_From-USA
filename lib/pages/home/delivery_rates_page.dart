@@ -3,8 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:from_usa/help_widgets/bottom_app_bar/bottom_app_bar_widget.dart';
 import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_button_location.dart';
 import 'package:from_usa/help_widgets/text_widget.dart';
-import 'package:from_usa/pages/bag/main_page.dart';
-import 'package:from_usa/pages/home/main_page.dart';
+import 'package:from_usa/pages/bag/bag_main_page.dart';
+import 'package:from_usa/pages/box/box_main_page.dart';
+import 'package:from_usa/pages/home/home_main_page.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class DeliveryRates extends StatefulWidget {
@@ -77,7 +78,6 @@ class _DeliveryRatesState extends State<DeliveryRates> {
           imageTwo: "assetsBag/assetsSvg/activeBag.svg",
           imageThree: "assetsBag/assetsSvg/invoice.svg",
           imageFor: "assetsDelivery/assetsSvg/profile.svg",
-          onPressedFirst: () {},
           onPressedTwo: () {
             Navigator.push(
               context,
@@ -86,7 +86,14 @@ class _DeliveryRatesState extends State<DeliveryRates> {
               ),
             );
           },
-          onPressedThree: () {},
+          onPressedThree: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const BoxMain(),
+              ),
+            );
+          },
           onPressedFor: () {},
         ),
       ),
@@ -130,7 +137,9 @@ class _DeliveryRatesState extends State<DeliveryRates> {
             Row(
               children: [
                 globals.sizedBoxWidth20px,
-                SvgPicture.asset("assetsPanel/assetsSvg/radio.svg"),
+                SvgPicture.asset(
+                  "assetsPanel/assetsSvg/radio.svg",
+                ),
                 globals.sizedBoxWidth10px,
                 const TextLato40pxW800(
                   text: 'Покупка и доставка',
@@ -145,7 +154,7 @@ class _DeliveryRatesState extends State<DeliveryRates> {
                 SvgPicture.asset(
                   "assetsPanel/assetsSvg/radioWhite.svg",
                   colorFilter: const ColorFilter.mode(
-                    Color.fromRGBO(247, 243, 244, 1),
+                    Color.fromRGBO(247, 243, 244, 1.0),
                     BlendMode.srcATop,
                   ),
                 ),
@@ -168,7 +177,7 @@ class _DeliveryRatesState extends State<DeliveryRates> {
                 borderRadius: BorderRadiusDirectional.circular(
                   15.0,
                 ),
-                color: const Color.fromRGBO(248, 250, 253, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: DropdownButton(
                 padding: const EdgeInsets.only(
@@ -219,7 +228,7 @@ class _DeliveryRatesState extends State<DeliveryRates> {
                 borderRadius: BorderRadiusDirectional.circular(
                   15.0,
                 ),
-                color: const Color.fromRGBO(248, 250, 253, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: DropdownButton(
                 padding: const EdgeInsets.only(
@@ -269,7 +278,7 @@ class _DeliveryRatesState extends State<DeliveryRates> {
                 borderRadius: BorderRadiusDirectional.circular(
                   15.0,
                 ),
-                color: const Color.fromRGBO(248, 250, 253, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: TextField(
                 controller: _savedValueWeightParcels,
@@ -291,7 +300,7 @@ class _DeliveryRatesState extends State<DeliveryRates> {
                 borderRadius: BorderRadiusDirectional.circular(
                   15.0,
                 ),
-                color: const Color.fromRGBO(248, 250, 253, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: TextField(
                 controller: _controllerprice,
@@ -369,7 +378,7 @@ class _DeliveryRatesState extends State<DeliveryRates> {
                 borderRadius: BorderRadiusDirectional.circular(
                   15.0,
                 ),
-                color: const Color.fromRGBO(248, 250, 253, 1),
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: const Padding(
                 padding: EdgeInsets.only(

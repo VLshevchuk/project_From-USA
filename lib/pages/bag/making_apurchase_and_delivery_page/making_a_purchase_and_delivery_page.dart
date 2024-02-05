@@ -18,7 +18,7 @@ class MakingAPurchaseAndDeliveryPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(right: 25.0, left: 25.0),
+        padding: const EdgeInsets.only(right: 25.0, left: 25.0,),
         child: SingleChildScrollView(
           child: Column(
             children: [

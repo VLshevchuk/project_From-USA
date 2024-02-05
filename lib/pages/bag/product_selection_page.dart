@@ -5,7 +5,7 @@ import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_butto
 import 'package:from_usa/help_widgets/text_widget.dart';
 import 'package:from_usa/pages/bag/buy_and_delivery_page.dart';
 import 'package:from_usa/pages/bag/making_delivery_only_page/making_delivery_only_page.dart';
-import 'package:from_usa/pages/home/main_page.dart';
+import 'package:from_usa/pages/home/home_main_page.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class ProductSelection extends StatefulWidget {

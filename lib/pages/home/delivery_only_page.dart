@@ -5,12 +5,15 @@ import 'package:from_usa/help_widgets/green_button.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:from_usa/help_widgets/text_widget.dart';
 import 'package:from_usa/help_widgets/row_widget.dart';
-import 'package:from_usa/pages/bag/main_page.dart';
-import 'package:from_usa/pages/home/main_page.dart';
+import 'package:from_usa/pages/bag/bag_main_page.dart';
+import 'package:from_usa/pages/box/box_main_page.dart';
+import 'package:from_usa/pages/home/home_main_page.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class DeliveryOnly extends StatelessWidget {
-  const DeliveryOnly({super.key});
+  const DeliveryOnly({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +23,14 @@ class DeliveryOnly extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color.fromRGBO(15, 196, 148, 1.0),
-        child: SvgPicture.asset("assetsDelivery/assetsSvg/+.svg"),
+        child: SvgPicture.asset(
+          "assetsDelivery/assetsSvg/+.svg",
+        ),
       ),
-      floatingActionButtonLocation:
-          CustomFloatingActionButtonLocation(bottom: 68, left: 177.5),
+      floatingActionButtonLocation: CustomFloatingActionButtonLocation(
+        bottom: 68,
+        left: 177.5,
+      ),
       bottomNavigationBar: BottomAppBar(
         clipBehavior: Clip.none,
         elevation: 0,
@@ -41,12 +48,22 @@ class DeliveryOnly extends StatelessWidget {
               ),
             );
           },
-          onPressedThree: () {},
+          onPressedThree: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const BoxMain(),
+              ),
+            );
+          },
           onPressedFor: () {},
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+        padding: const EdgeInsets.only(
+          left: 25.0,
+          right: 25.0,
+        ),
         child: Column(
           children: [
             globals.sizedBoxHeight50px,
@@ -62,7 +79,9 @@ class DeliveryOnly extends StatelessWidget {
                       ),
                     );
                   },
-                  icon: SvgPicture.asset('assetsDelivery/assetsSvg/left2.svg'),
+                  icon: SvgPicture.asset(
+                    'assetsDelivery/assetsSvg/left2.svg',
+                  ),
                 ),
                 const TextWidgets(
                     text: "Только  доставка",
@@ -71,14 +90,18 @@ class DeliveryOnly extends StatelessWidget {
                     fontWeight: FontWeight.w800,
                     color: Color.fromRGBO(19, 59, 119, 1.0),
                     letterSpacing: 0.5),
-                SvgPicture.asset('assetsDelivery/assetsSvg/vectorD.svg'),
+                SvgPicture.asset(
+                  'assetsDelivery/assetsSvg/vectorD.svg',
+                ),
               ],
             ),
             globals.sizedBoxHeight30px,
             Container(
               height: 74.0,
               decoration: BoxDecoration(
-                borderRadius: BorderRadiusDirectional.circular(10.0),
+                borderRadius: BorderRadiusDirectional.circular(
+                  10.0,
+                ),
                 color: const Color.fromRGBO(248, 250, 253, 1.0),
               ),
               child: const Column(
@@ -110,7 +133,7 @@ class DeliveryOnly extends StatelessWidget {
 от магазина.''',
               ),
               svgpicture: "assetsPanel/assetsSvg/edit2.svg",
-              color: Color.fromRGBO(0, 102, 255, 1),
+              color: Color.fromRGBO(0, 102, 255, 1.0),
             ),
             globals.sizedBoxHeight70px,
             const RowWidget(
@@ -119,7 +142,7 @@ class DeliveryOnly extends StatelessWidget {
  оплатите заказ''',
               ),
               svgpicture: "assetsPanel/assetsSvg/money.svg",
-              color: Color.fromRGBO(0, 102, 255, 1),
+              color: Color.fromRGBO(0, 102, 255, 1.0),
             ),
             globals.sizedBoxHeight70px,
             const RowWidget(
@@ -130,11 +153,11 @@ class DeliveryOnly extends StatelessWidget {
 кабинете''',
               ),
               svgpicture: "assetsPanel/assetsSvg/location.svg",
-              color: Color.fromRGBO(0, 102, 255, 1),
+              color: Color.fromRGBO(0, 102, 255, 1.0),
             ),
             globals.sizedBoxHeight60px,
             GreenButton(
-              fillColor: const Color.fromRGBO(0, 102, 255, 1),
+              fillColor: const Color.fromRGBO(0, 102, 255, 1.0),
               onPressed: () {},
               change: true,
               textWidget: const Center(
@@ -143,7 +166,7 @@ class DeliveryOnly extends StatelessWidget {
                   fontFamily: "Lato",
                   fontSize: 14.0,
                   fontWeight: FontWeight.w800,
-                  color: Color.fromRGBO(255, 255, 255, 1),
+                  color: Color.fromRGBO(255, 255, 255, 1.0),
                   letterSpacing: 1.0,
                 ),
               ),

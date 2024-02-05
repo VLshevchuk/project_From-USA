@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:from_usa/pages/botom_app_bar/profile/pages/bank_cards_function/bank_cards.dart';
-import 'package:from_usa/pages/botom_app_bar/profile/pages/correction_function/correction_profile.dart';
-import 'package:from_usa/pages/botom_app_bar/profile/pages/earn_money_function/earn_money.dart';
-import 'package:from_usa/pages/botom_app_bar/profile/pages/finance_function/finance_profile.dart';
-import 'package:from_usa/pages/botom_app_bar/profile/pages/recipient_addresses_function/recipient_addresses.dart';
-import 'package:from_usa/pages/botom_app_bar/profile/pages/warehouse_addresses/warehouse_addresses_function.dart';
+
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
+import 'package:from_usa/pages/profile/bank_cards_pages/bank_cards_page.dart';
+import 'package:from_usa/pages/profile/correction_profile_page.dart';
+import 'package:from_usa/pages/profile/earn_money_page.dart';
+import 'package:from_usa/pages/profile/finance_profile_page/finance_profile_page.dart';
+import 'package:from_usa/pages/profile/recipient_addresses_pages/recipient_addresses_page.dart';
+import 'package:from_usa/pages/profile/warehouse_addresses_page.dart';
 
 
 class Body extends StatelessWidget {
@@ -82,7 +83,7 @@ Widget profileContainer(BuildContext context) {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const CorrectionProfile(),
+                builder: (context) => const CorrectionProfilePage(),
               ),
             );
           },
@@ -311,7 +312,7 @@ Widget functionTabs(BuildContext context) {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const FinanceProfile(),
+              builder: (context) => const FinanceProfilePage(),
             ),
           );
         },
@@ -335,7 +336,7 @@ Widget functionTabs(BuildContext context) {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const RecipientAddresses(),
+              builder: (context) => const RecipientAddressesPage(),
             ),
           );
         },
@@ -347,7 +348,7 @@ Widget functionTabs(BuildContext context) {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const WarehouseAddress(),
+              builder: (context) => const WarehouseAddressPage(),
             ),
           );
         },
@@ -359,7 +360,7 @@ Widget functionTabs(BuildContext context) {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const EarnMoney(),
+              builder: (context) => const EarnMoneyPage(),
             ),
           );
         },

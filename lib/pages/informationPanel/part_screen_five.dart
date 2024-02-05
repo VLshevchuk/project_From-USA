@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:from_usa/help_widgets/text_widget.dart';
 
-import 'package:from_usa/pages/home/main_page.dart';
+import 'package:from_usa/pages/home/home_main_page.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 import '../../help_widgets/green_button.dart';

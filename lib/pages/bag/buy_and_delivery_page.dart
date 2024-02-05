@@ -16,7 +16,10 @@ class FunctionBuyAndDelivery extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(right: 25.0, left: 25.0),
+        padding: const EdgeInsets.only(
+          right: 25.0,
+          left: 25.0,
+        ),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -33,8 +36,9 @@ class FunctionBuyAndDelivery extends StatelessWidget {
                         ),
                       );
                     },
-                    icon:
-                        SvgPicture.asset('assetsDelivery/assetsSvg/left2.svg'),
+                    icon: SvgPicture.asset(
+                      'assetsDelivery/assetsSvg/left2.svg',
+                    ),
                   ),
                   const TextWidgets(
                     text: "Покупка и доставка",
@@ -78,7 +82,7 @@ class FunctionBuyAndDelivery extends StatelessWidget {
                   ),
                 ),
                 svgpicture: "assetsBag/assetsSvg/plusBlue.svg",
-                color: const Color.fromRGBO(0, 102, 255, 1),
+                color: const Color.fromRGBO(0, 102, 255, 1.0),
               ),
               RowWidget(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -89,7 +93,7 @@ class FunctionBuyAndDelivery extends StatelessWidget {
                   ),
                 ),
                 svgpicture: "assetsDelivery/assetsSvg/+-.svg",
-                color: const Color.fromRGBO(0, 102, 255, 1),
+                color: const Color.fromRGBO(0, 102, 255, 1.0),
               ),
               const SizedBox(
                 height: 300,
@@ -100,7 +104,8 @@ class FunctionBuyAndDelivery extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const MakingAPurchaseAndDeliveryPage(),
+                      builder: (context) =>
+                          const MakingAPurchaseAndDeliveryPage(),
                     ),
                   );
                 },

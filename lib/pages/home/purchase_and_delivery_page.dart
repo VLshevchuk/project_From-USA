@@ -5,8 +5,9 @@ import 'package:from_usa/help_widgets/bottom_app_bar/customfloating_action_butto
 import 'package:from_usa/help_widgets/green_button.dart';
 import 'package:from_usa/help_widgets/row_widget.dart';
 import 'package:from_usa/help_widgets/text_widget.dart';
-import 'package:from_usa/pages/bag/main_page.dart';
-import 'package:from_usa/pages/home/main_page.dart';
+import 'package:from_usa/pages/bag/bag_main_page.dart';
+import 'package:from_usa/pages/box/box_main_page.dart';
+import 'package:from_usa/pages/home/home_main_page.dart';
 import 'package:from_usa/pages/path/to/globals.dart' as globals;
 
 class PurchaseAndDelivery extends StatelessWidget {
@@ -20,10 +21,14 @@ class PurchaseAndDelivery extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color.fromRGBO(15, 196, 148, 1.0),
-        child: SvgPicture.asset("assetsDelivery/assetsSvg/+.svg"),
+        child: SvgPicture.asset(
+          "assetsDelivery/assetsSvg/+.svg",
+        ),
       ),
-      floatingActionButtonLocation:
-          CustomFloatingActionButtonLocation(bottom: 68, left: 177.5),
+      floatingActionButtonLocation: CustomFloatingActionButtonLocation(
+        bottom: 68,
+        left: 177.5,
+      ),
       bottomNavigationBar: BottomAppBar(
         clipBehavior: Clip.none,
         elevation: 0,
@@ -41,12 +46,22 @@ class PurchaseAndDelivery extends StatelessWidget {
               ),
             );
           },
-          onPressedThree: () {},
+          onPressedThree: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const BoxMain(),
+              ),
+            );
+          },
           onPressedFor: () {},
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+        padding: const EdgeInsets.only(
+          left: 25.0,
+          right: 25.0,
+        ),
         child: Column(
           children: [
             globals.sizedBoxHeight50px,
@@ -92,7 +107,9 @@ class PurchaseAndDelivery extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(
                         14.0,
-                      ).copyWith(top: 9.0),
+                      ).copyWith(
+                        top: 9.0,
+                      ),
                       child: const TextLato14pxW400(
                         text:
                             "Текст о безопастности и всем таком,что отличает покупку и доставку от просто доставки",

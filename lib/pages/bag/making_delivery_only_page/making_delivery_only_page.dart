@@ -39,7 +39,7 @@ class _MakingDeliveryOnlyStatePage extends State<MakingDeliveryOnlyPage> {
               SvgPicture.asset(
                 "assetsBag/assetsSvg/green_stripe.svg",
                 colorFilter: const ColorFilter.mode(
-                  Color.fromRGBO(19, 59, 119, 1),
+                  Color.fromRGBO(19, 59, 119, 1.0),
                   BlendMode.srcATop,
                 ),
               ),
@@ -52,7 +52,7 @@ class _MakingDeliveryOnlyStatePage extends State<MakingDeliveryOnlyPage> {
                   fontFamily: 'Lato',
                   fontSize: 16.0,
                   fontWeight: FontWeight.w700,
-                  color: Color.fromRGBO(19, 59, 119, 1),
+                  color: Color.fromRGBO(19, 59, 119, 1.0),
                   letterSpacing: 0.6,
                 ),
                 svgpicture: 'assetsBag/assetsSvg/cart_home.svg',
@@ -68,7 +68,10 @@ class _MakingDeliveryOnlyStatePage extends State<MakingDeliveryOnlyPage> {
                         BoxShadow(
                           spreadRadius: 2.0,
                           color: Color.fromRGBO(19, 59, 119, 0.13),
-                          offset: Offset(0, 9),
+                          offset: Offset(
+                            0,
+                            9,
+                          ),
                           blurRadius: 14.0,
                         ),
                       ],
@@ -141,6 +144,7 @@ class _MakingDeliveryOnlyStatePage extends State<MakingDeliveryOnlyPage> {
                 ),
               ),
               RowWidget(
+                color: const Color.fromRGBO(248, 250, 253, 1.0),
                 text: TextButton(
                   onPressed: () {},
                   child: const TextWidgets(
@@ -148,7 +152,7 @@ class _MakingDeliveryOnlyStatePage extends State<MakingDeliveryOnlyPage> {
                     fontFamily: 'Lato',
                     fontSize: 14.0,
                     fontWeight: FontWeight.w400,
-                    color: Color.fromRGBO(19, 59, 119, 1),
+                    color: Color.fromRGBO(19, 59, 119, 1.0),
                     letterSpacing: 1.0,
                   ),
                 ),
@@ -172,7 +176,10 @@ class _MakingDeliveryOnlyStatePage extends State<MakingDeliveryOnlyPage> {
                     ),
               addInvoice == true
                   ? Padding(
-                      padding: const EdgeInsets.only(top: 30.0, bottom: 11.0),
+                      padding: const EdgeInsets.only(
+                        top: 30.0,
+                        bottom: 11.0,
+                      ),
                       child: GreenButton(
                         fillColor: const Color.fromRGBO(0, 102, 255, 1.0),
                         onPressed: () {},

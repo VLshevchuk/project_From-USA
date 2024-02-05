@@ -7,6 +7,9 @@ class GreenButton extends StatelessWidget {
   final String? svg;
   final bool change;
   final dynamic textWidget;
+  final double? radius;
+  final double? heightBox;
+  final double? widthBox;
   const GreenButton({
     super.key,
     required this.fillColor,
@@ -14,6 +17,7 @@ class GreenButton extends StatelessWidget {
     required this.change,
     this.textWidget,
     this.svg,
+    this.radius, this.heightBox, this.widthBox,
   });
   @override
   Widget build(BuildContext context) {
@@ -21,8 +25,8 @@ class GreenButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: 325.0,
-          height: 56.0,
+          width:widthBox?? 325.0,
+          height:heightBox?? 56.0,
           child: ElevatedButton(
             onPressed: onPressed,
             style: ElevatedButton.styleFrom(
@@ -30,7 +34,7 @@ class GreenButton extends StatelessWidget {
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(
-                  16.0,
+                  radius ?? 16.0,
                 ),
               ),
             ),
@@ -39,7 +43,11 @@ class GreenButton extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       textWidget ?? const SizedBox(),
-                      svg != null ? SvgPicture.asset(svg!) : const SizedBox(),
+                      svg != null
+                          ? SvgPicture.asset(
+                              svg!,
+                            )
+                          : const SizedBox(),
                     ],
                   )
                 : Row(
@@ -47,7 +55,11 @@ class GreenButton extends StatelessWidget {
                       Expanded(
                         child: textWidget ?? const SizedBox(),
                       ),
-                      svg != null ? SvgPicture.asset(svg!) : const SizedBox(),
+                      svg != null
+                          ? SvgPicture.asset(
+                              svg!,
+                            )
+                          : const SizedBox(),
                     ],
                   ),
           ),

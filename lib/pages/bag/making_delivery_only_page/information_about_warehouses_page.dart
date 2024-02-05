@@ -1,26 +1,36 @@
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:from_usa/help_widgets/green_button.dart';
 import 'package:from_usa/help_widgets/text_widget.dart';
 import 'package:from_usa/pages/bag/making_delivery_only_page/add_estimated_cost_page.dart';
+import 'package:from_usa/pages/bag/making_delivery_only_page/widgets/row_text_widget.dart';
 
 class InformationAboutWarehousesPage extends StatelessWidget {
-  const InformationAboutWarehousesPage({super.key});
+  const InformationAboutWarehousesPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0, top: 50.0),
+        padding: const EdgeInsets.only(
+          left: 25.0,
+          right: 25.0,
+          top: 50.0,
+        ),
         child: SingleChildScrollView(
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: const Color.fromRGBO(248, 250, 253, 1),
+              borderRadius: BorderRadius.circular(
+                10.0,
+              ),
+              color: const Color.fromRGBO(248, 250, 253, 1.0),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(left: 21.0),
+              padding: const EdgeInsets.only(
+                left: 21.0,
+              ),
               child: Column(
                 children: [
                   const Padding(
@@ -35,7 +45,7 @@ class InformationAboutWarehousesPage extends StatelessWidget {
                           fontFamily: 'Lato',
                           fontSize: 30.0,
                           fontWeight: FontWeight.w800,
-                          color: Color.fromRGBO(19, 59, 119, 1),
+                          color: Color.fromRGBO(19, 59, 119, 1.0),
                           letterSpacing: 0.5,
                         ),
                       ],
@@ -52,7 +62,7 @@ class InformationAboutWarehousesPage extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
                               letterSpacing: 1.0,
-                              color: Color.fromRGBO(19, 59, 119, 1),
+                              color: Color.fromRGBO(19, 59, 119, 1.0),
                             ),
                           ),
                         ],
@@ -66,7 +76,7 @@ class InformationAboutWarehousesPage extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               fontSize: 16.0,
                               letterSpacing: 0.5,
-                              color: Color.fromRGBO(19, 59, 119, 1),
+                              color: Color.fromRGBO(19, 59, 119, 1.0),
                             ),
                           ),
                         ],
@@ -109,7 +119,7 @@ class InformationAboutWarehousesPage extends StatelessWidget {
                             fontFamily: 'Lato',
                             fontSize: 30.0,
                             fontWeight: FontWeight.w800,
-                            color: Color.fromRGBO(19, 59, 119, 1),
+                            color: Color.fromRGBO(19, 59, 119, 1.0),
                             letterSpacing: 0.5,
                           ),
                         ),
@@ -127,7 +137,7 @@ class InformationAboutWarehousesPage extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
                               letterSpacing: 1.0,
-                              color: Color.fromRGBO(19, 59, 119, 1),
+                              color: Color.fromRGBO(19, 59, 119, 1.0),
                             ),
                           ),
                         ],
@@ -141,7 +151,7 @@ class InformationAboutWarehousesPage extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               fontSize: 16.0,
                               letterSpacing: 0.5,
-                              color: Color.fromRGBO(19, 59, 119, 1),
+                              color: Color.fromRGBO(19, 59, 119, 1.0),
                             ),
                           ),
                         ],
@@ -207,58 +217,6 @@ class InformationAboutWarehousesPage extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class RowTextWidget extends StatelessWidget {
-  final String textWeight400;
-  final String textWeight700;
-  const RowTextWidget(
-      {required this.textWeight400, required this.textWeight700, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    TextStyle textStyleWeight400 = const TextStyle(
-      fontFamily: 'Lato',
-      fontWeight: FontWeight.w400,
-      fontSize: 14.0,
-      letterSpacing: 1.0,
-      color: Color.fromRGBO(19, 59, 119, 1),
-    );
-    TextStyle textStyleWeight700 = const TextStyle(
-      fontFamily: 'Lato',
-      fontWeight: FontWeight.w700,
-      fontSize: 16.0,
-      letterSpacing: 0.5,
-      color: Color.fromRGBO(19, 59, 119, 1),
-    );
-    return Column(
-      children: [
-        Row(
-          children: [
-            Text(
-              textWeight400,
-              style: textStyleWeight400,
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              textWeight700,
-              style: textStyleWeight700,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                "assetsBag/assetsSvg/copyIcon.svg",
-              ),
-            ),
-          ],
-        ),
-      ],
     );
   }
 }
